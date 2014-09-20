@@ -5,14 +5,3 @@ subprojects {
     apply plugin: 'project-report'
     apply plugin: 'maven-publish'
 }
-
-project(':website') {
-    dependencies {
-        compile project(':libs:utils')
-    }
-}
-project(':springSample') {
-    dependencies {
-        compile project(':libs:utils')
-    }
-}

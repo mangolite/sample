@@ -1,0 +1,43 @@
+{
+	jquery=
+		[
+			{
+				jquery= [../../frameworks/jquery/jquery.js]
+			}
+		], 
+	bootstrap-css=
+		[
+			{
+				main=[../../frameworks/bootstrap/css/bootstrap.css], 
+				theme=[../../frameworks/bootstrap/css/bootstrap-theme.css]
+			}
+		], 
+	bootstrap-js=
+		[
+			{
+				js=[../../frameworks/bootstrap/js/bootstrap.js], 
+				@=[jquery]
+			}
+		], 
+	bootstrap=
+		[
+			{
+				@=[bootstrap-css,bootstrap-js]
+			}
+		], 
+	font-awesome=
+		[
+			{
+				css=[../../fortawesome/font-awesome/css/font-awesome.css]
+			}
+		], 
+	bootstrap-star-rating=
+		[
+			{
+				css=[../../kartik-v/bootstrap-star-rating/css/star-rating.css], 
+				js=[../../kartik-v/bootstrap-star-rating/js/star-rating.js], 
+				@=[bootstrap,jquery]
+			}
+		]
+}
+				

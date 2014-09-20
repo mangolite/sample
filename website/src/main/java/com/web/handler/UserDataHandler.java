@@ -3,12 +3,12 @@ package com.web.handler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 
-import com.web.AbstractHandler;
-import com.web.ActionHandler;
-import com.web.HandlerAction;
 import com.web.models.HelloMessage;
 import com.web.models.Name;
 import com.web.models.UserDetails;
+import com.webutils.AbstractHandler;
+import com.webutils.annotations.ActionHandler;
+import com.webutils.annotations.HandlerAction;
 
 /**
  * THis is sampe test handler.

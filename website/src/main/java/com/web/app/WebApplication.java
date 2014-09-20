@@ -13,8 +13,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.DispatcherServlet;
 
-//import com.utils.Log;
+import com.utils.Log;
 import com.web.ResourceMinifyFilter;
+
+//import com.utils.Log;
 
 /**
  * {@link EnableAutoConfiguration Auto-configuration} to enable Spring MVC to
@@ -29,24 +31,24 @@ import com.web.ResourceMinifyFilter;
 @ComponentScan(basePackages = { "com.web.controller", "com.web.config" })
 public class WebApplication extends SpringBootServletInitializer {
 
-	//private static final Log LOG = new Log();
+	private static final Log LOG = new Log();
 
 	public static void main(String[] args) {
 
 		SpringApplication app = new SpringApplication(WebApplication.class);
 		ApplicationContext ctx = app.run(args);
-		//LOG.info("Let's inspect the beans provided by Spring Boot:");
+		LOG.info("Let's inspect the beans provided by Spring Boot:");
 		String[] beanNames = ctx.getBeanDefinitionNames();
 		Arrays.sort(beanNames);
 		for (String beanName : beanNames) {
-			//LOG.info(beanName);
+			LOG.info(beanName);
 		}
 
 	}
 
 	/**
-	 * Register with FilterRegistrationBean, files which are to be minified or if
-	 * any other filter is to be added
+	 * Register with FilterRegistrationBean, files which are to be minified or
+	 * if any other filter is to be added
 	 * 
 	 * Refer : http://www.leveluplunch.com/blog/2014/04/01/spring-boot-
 	 * configure-servlet-mapping-filters/

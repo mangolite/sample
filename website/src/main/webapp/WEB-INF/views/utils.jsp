@@ -5,6 +5,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <title>Hello WebSocket</title>
+
+<link type="text/css" rel="stylesheet"  href="/app/resources/css/compiled/bootstrap/bootstrap.css" />
+
+<link type="text/css" rel="stylesheet"  href="/app/resources/css/compiled/skin/black/theme.css" />
+
 <script type="text/javascript">
 	window.BrowserDetect = new (function(){
 		this.isBelowIE9 = false;
@@ -15,13 +20,12 @@
 	window.BrowserDetect.isBelowIE9 = true;
 </script>
 <![endif]-->
-<script src="/app/libs/jqgeeks/jquery/jquery.js"></script>
-<script src="/app/libs/jqgeeks/utils/utils.js"></script>
-<script src="/app/libs/jqgeeks/utils/tools/wiretap.js?no"></script>
+<script src="/app/resources/jquery/jquery.js"></script>
+<script src="/app/resources/utils/utils.js"></script>
 <script src="/app/resources/static/sockjs-0.3.4.js"></script>
 <script src="/app/resources/static/stomp.js"></script>
 </head>
-<body>
+<body data-user="${user}">
 	<noscript>
 		<h2 style="color: #ff0000">Seems your browser doesn't support
 			Javascript! Websocket relies on Javascript being enabled. Please
@@ -33,17 +37,21 @@
 		</div>
 		<div>
 			<p>
-				A.B <input class="tag" type="text" data-path="name.fname" formattype="date"
+				name.fname<input class="tag" type="text" data-path="name.fname" formattype="date"
 					id="name" />
 			</p>
 			<p>
-				A.C <input class="tag" type="text" data-path="name.lname" formattype="date"
+				name.lname <input class="tag" type="text" data-path="name.lname" formattype="date"
 					id="name" />
 			</p>
 						<p>
-				A.B <input class="tag" type="text" data-path="age" formattype="date"
+				age <input class="tag" type="text" data-path="age" formattype="date"
 					id="name" />
 			</p>
+				<p> Hello 
+				<b><span data-path="name.fname"></span> <span data-path="name.lname"></span></b>
+					Your age is <b><span data-path="age"></span></b>
+				</p>
 		</div>
 	</div>
 </body>

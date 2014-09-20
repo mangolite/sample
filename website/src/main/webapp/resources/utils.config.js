@@ -1,9 +1,10 @@
 utils.config.set({
 	debug : true,
-	baseUrl : '/app/resources/',
+	contextPath : 'app',
+	resourcePath : 'resources',
 	moduleDir : {
 		'dff.*' : 'dff/models/',
-		'utils.*' : '../libs/jqgeeks/utils/',
+		'utils.*' : '../libs/jqgeeks/utils/'
 	},
 	template : 'folader',
 	combine : true,

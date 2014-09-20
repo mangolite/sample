@@ -1,10 +1,10 @@
 package com.web.handler;
 
-import com.web.AbstractHandler;
-import com.web.ActionHandler;
-import com.web.HandlerAction;
 import com.web.models.Greeting;
 import com.web.models.HelloMessage;
+import com.webutils.AbstractHandler;
+import com.webutils.annotations.ActionHandler;
+import com.webutils.annotations.HandlerAction;
 
 /**
  * THis is sampe test handler.

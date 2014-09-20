@@ -33,63 +33,42 @@ td {
 th, td {
     padding: 10px 20px;
 }
-.demoG{
-float : left;
-width : 500px;
-}
 </style>
 
-<div id="demo" class="demoG">
-	<div v-text="xxx.n"></div>
+<div id="demo">
     <table v-component="grid" v-with="gridOptions"></table>
 </div>
-<div id="demo2" class="demoG">
-	<div v-model="xxx.n"></div>
+<div id="demo2">
     <table v-component="grid" v-with="gridOptions"></table>
 </div>
 <p style="font-size:12px">* You can click on the headers to sort the table.</p>
-<div style="clear:both"></div>
-<hr/>
-<div id="demo3" class="">
-	<div v-model="xxx.n"></div>
-</div>
-<div style="clear:both"></div>
-<hr/>
-<div id="demo4" class="">
-	<div v-model="xxx.n"></div>
-</div>
-<input class="teest"/> <input class="teest"/>
 
 <script type="text/x-template" id="grid-template">
-<table>
-	<thead>
-		<tr>
-			<th v-repeat="columns" v-on="click:sortBy(key)">{{header}}</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr v-repeat="data">
-			<!-- access outer loop's data using $parent -->
-			<td v-repeat="columns" ><input v-model="xxx.n"/></td>
-		</tr>
-	</tbody>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th v-repeat="columns" v-on="click:sortBy(key)">{{header}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-repeat="data">
+                <!-- access outer loop's data using $parent -->
+                <td v-repeat="columns">{{$parent[key]}}</td>
+            </tr>
+        </tbody>
+    </table>
 </script>
 
 <script>
 
 //raw data
 var STORE = {
-		data : [
-		 { name: 'Chuck Norris', power: Infinity },
-		  { name: 'Bruce Lee', power: 9000 },
-		 { name: 'Jacky Chang', power: 7000 },
-		 { name: 'Jet Li', power: 8000 }
-		],
-		third : {
-			xxx : { n : 'xOK' },yyy : { n : 'yOK' }, count : 0
+		data : {
+		 x :       { name: 'Chuck Norris', power: Infinity },
+		 y:        { name: 'Bruce Lee', power: 9000 },
+		  z:       { name: 'Jacky Chang', power: 7000 },
+		   w :     { name: 'Jet Li', power: 8000 }
 		}
-		
 }
 
 // register the grid component
@@ -97,7 +76,7 @@ var STORE = {
 // the template won't be parsed properly
 Vue.component('grid', {
     template: '#grid-template',
-  //  replace: true,
+    replace: true,
     created: function () {
         this.ascending = {}
     },
@@ -117,7 +96,6 @@ Vue.component('grid', {
 var myTable = new Vue({
     el: '#demo',
     data: {
-    	xxx : { n : "dem1111" },
         gridOptions: {
             data: STORE.data,
             columns: [
@@ -130,7 +108,6 @@ var myTable = new Vue({
 var myTable2 = new Vue({
     el: '#demo2',
     data: {
-    	xxx : { n : "dem2222" },
         gridOptions: {
             data: STORE.data,
             columns: [
@@ -141,21 +118,6 @@ var myTable2 = new Vue({
     }
 })
 
-var myTable3 = new Vue({
-    el: '#demo3',
-    template : '<div v-model="yyy.n"></div><div v-model="count"></div>',
-    data: STORE.third
-})
-var myTable4 = new Vue({
-    el: '#demo4',
-    template : '<div v-model="yyy.n"  v-on="click:notok"></div><div v-model="zzz.n"></div>',
-    data: STORE.third,
-    methods : {
-    	notok : function(v){
-    		this.count++;
-    	}
-    }
-})
 </script>
 </body>
 <script src="/app/resources/dff/dff.init.js"></script>

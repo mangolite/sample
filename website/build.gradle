@@ -44,7 +44,7 @@ dependencies {
 	compile("org.reflections:reflections:0.9.9-RC1")
 
 	//Minifier
-	compile 'com.yahoo.platform.yui:yuicompressor:2.3.6'
+	//compile 'com.yahoo.platform.yui:yuicompressor:2.3.6'
 
 
 	// TODO: why are these required? need classification
@@ -57,8 +57,10 @@ dependencies {
 	compile "org.aspectj:aspectjweaver:1.7.0"
 	compile "org.aspectj:aspectjrt:1.7.0"
 
-	compile "javax.servlet:javax.servlet-api:3.0.1"
-	compile "javax.servlet.jsp:jsp-api:2.2"
+//	compile "javax.servlet:javax.servlet-api:3.0.1"
+//	compile "javax.servlet.jsp:jsp-api:2.2"
+	
+	compile project(":libs:webutils")
 
 	testCompile "org.apache.tomcat:tomcat-catalina:$tomcatVersion"
 	testCompile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion"
