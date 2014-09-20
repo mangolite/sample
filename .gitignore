@@ -41,6 +41,7 @@ test-output
 Servers
 obj
 work
+libs
 website/src/main/webapp/libs/
 website/src/main/webapp/libs
 
