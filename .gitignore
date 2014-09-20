@@ -41,8 +41,8 @@ test-output
 Servers
 obj
 work
-project/src/main/webapp/libs/
-project/src/main/webapp/libs
+website/src/main/webapp/libs/
+website/src/main/webapp/libs
 
 # minification files #
 ######################
