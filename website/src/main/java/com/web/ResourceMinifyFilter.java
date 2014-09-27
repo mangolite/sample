@@ -69,4 +69,24 @@ public class ResourceMinifyFilter extends AsbtractResourceMinifyFilter {
 	public void destroy() {
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.webutils.AsbtractResourceMinifyFilter#getLibPath()
+	 */
+	@Override
+	public String getLibPath() {
+		return LIB_PATH_REPLACE;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.webutils.AsbtractResourceMinifyFilter#getResourcesPath()
+	 */
+	@Override
+	public String getResourcesPath() {
+		return RES_PATH_REPLACE;
+	}
+
 }
