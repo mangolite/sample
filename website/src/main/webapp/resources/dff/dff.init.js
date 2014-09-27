@@ -3,11 +3,12 @@
 utils.define("dff.init").as(function(init) {
 	//var g = dff.grandfather.instance();
 	//var f = dff.father.instance();
-	//ar s = utils.module('dff.son').instance("Ram");
+	//var S = utils.module('dff.son');
+	//var s = utils.module('dff.son').instance("Ram");
 	//var s2 = dff.son.instance("Ramesh");
 	//console.log(s2.title);
 	
-	/*
+/*	
 	utils.require('utils.custom.tag');
 	
 	init.templ =  utils.require('dff.mytemp').instance(
@@ -27,7 +28,14 @@ utils.define("dff.init").as(function(init) {
 		df
 		f.init.templ.data.patch({"~tags":[{"-3":0}]})
 		console.log("len==",init.templ.data.data.tags.length);
-	};
-	*/
-	utils.loadPackage("jqgeeks/utils_widget","jqgeeks/utils_main");
+	};*/
+	
+	//utils.loadPackage("jqgeeks/utils_widget","jqgeeks/utils_main");
+	utils.module('mytemplate').instance({ 
+		data : { 
+			name : {fname : "Lalit"}
+		},
+		$parent : $('#myform')
+	});
+	
 });

@@ -4,7 +4,7 @@ utils.config.set({
 	resourcePath : 'resources',
 	moduleDir : {
 		'dff.*' : 'dff/models/',
-		'utils.*' : '../libs/jqgeeks/utils/'
+		'utils.*' : '../lib/jqgeeks/utils/'
 	},
 	template : 'folader',
 	combine : true,

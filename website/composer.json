@@ -1,6 +1,6 @@
 {
     "config": {
-        "vendor-dir": "src/main/webapp/libs"
+        "vendor-dir": "src/main/webapp/lib"
     },
     "minimum-stability": "dev",
     

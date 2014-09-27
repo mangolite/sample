@@ -28,7 +28,7 @@ public class HandlerFactory {
 	private static Map<String, Method> actionMapping = new ConcurrentHashMap<String, Method>();
 
 	static {
-		Reflections reflections = new Reflections("com.dffweb.handler");
+		Reflections reflections = new Reflections("com.web.handler");
 		Set<Class<?>> annotated = reflections
 				.getTypesAnnotatedWith(ActionHandler.class);
 		for (Class<?> annotatedOne : annotated) {
@@ -76,8 +76,12 @@ public class HandlerFactory {
 			IllegalArgumentException, InvocationTargetException {
 		AbstractHandler handeler = handlerMapping.get(handlerName);
 		Method md = actionMapping.get(handlerName + "_" + actionName);
-		Class<?> clazz = md.getParameterTypes()[0];
-		return md.invoke(handeler, JsonUtil.fromJson(message.getData(), clazz));
+		if(md!=null){
+			Class<?> clazz = md.getParameterTypes()[0];
+			return md.invoke(handeler, JsonUtil.fromJson(message.getData(), clazz));
+		} else {
+			return null;
+		}
 	}
 
 }

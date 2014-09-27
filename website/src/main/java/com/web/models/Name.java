@@ -9,13 +9,19 @@ package com.web.models;
  * @lastModified Sep 4, 2014
  */
 public class Name {
+
+	private String fname;
+	private String lname;
+
+	public Name() {
+		this.fname = null;
+		this.lname = null;
+	}
+
 	public Name(String fname, String lname) {
 		this.fname = fname;
 		this.lname = lname;
 	}
-
-	private String fname;
-	private String lname;
 
 	public String getFname() {
 		return fname;

@@ -8,6 +8,9 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		if(this[name]) throw new Error('Cannot create bus with name"'+name + '"');
 		this[name] = resolver;
 		if(this[name].isDefault) defaultBus = name;
+		resolver.on = function(eName,listner){
+			return stompClient.on(this.path(),eName,listner);
+		}
 	};
 	function setConnected(connected) {
 		document.getElementById('connect').innerHTML = connected ? "Connected" : "Not Connected";
@@ -16,12 +19,12 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		userID = user_id || 'nouser'
 		userQueue = '/user/'+userID+'/notify/';
 		var socket = new SockJS('/app/tunnel');
-		console.info('connecting with userid:',userID)
+		//console.info('connecting with userid:',userID)
 		sClient = Stomp.over(socket);
 		sClient.connect({},function(frame) {
 			setConnected(true);
 		    whoami = frame.headers['user-name'];
-		    console.log('Connected: ',frame,frame.headers,whoami);
+//		    console.log('Connected: ',frame,frame.headers,whoami);
 		    ready = true;
 		    stompClient.setChannel('user',{
 		    	path : function(bus,eName){
@@ -41,14 +44,14 @@ utils.define('stompClient', function(stompClient, _instance_) {
 	function disconnect() {
 		sClient.disconnect();
 		setConnected(false);
-		console.log("Disconnected");
+		//console.log("Disconnected");
 	}
 	stompClient.onconnected = function(a,b,c,d,e){
 		console.log('conneted');
 	};
 
 	var subscribe = function(bus,eName,listner){
-		console.log(bus,eName,listner)
+		//console.log(bus,eName,listner)
 		if(stompClient[bus]){
 			sClient.subscribe(stompClient[bus].path(bus,eName), function(msg){
 				var data = JSON.parse(msg.body);
@@ -66,7 +69,7 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		} else throw new Error('specify bus')
 	};
 	stompClient.on = function(bus,eName,listner){
-		console.log(bus,eName,listner)
+		//console.log(bus,eName,listner)
 		if(ready){
 			stompClient.subscribe(bus,eName,listner);
 		} else {
@@ -78,7 +81,7 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		}
 	};
 	stompClient.send = function(handlerAction,data){
-		console.log(handlerAction,data,JSON.stringify(data))
+		//console.log(handlerAction,data,JSON.stringify(data))
 		sClient.send("/action/wsr/"+handlerAction, {}, JSON.stringify({
 			userToken : userID,
 			data : JSON.stringify(data)
@@ -86,6 +89,6 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		
 	};
 	stompClient._ready_ = function(){
-		connect(cookies.read('user'));
+		connect($('body').attr('data-user') || cookies.read('user'));
 	}
 })

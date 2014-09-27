@@ -45,8 +45,8 @@ import com.yahoo.platform.yui.compressor.JavaScriptCompressor;
 public class ResourceMinifyFilter extends AsbtractResourceMinifyFilter {
 	private static final String RES_PATH_MATCH = "/app/resources[0-9.]*/";
 	private static final String RES_PATH_REPLACE = "/resources/";
-	private static final String LIB_PATH_MATCH = "/app/libs[0-9.]*/";
-	private static final String LIB_PATH_REPLACE = "/libs/";
+	private static final String LIB_PATH_MATCH = "/app/lib[0-9.]*/";
+	private static final String LIB_PATH_REPLACE = "/lib/";
 
 	private static Map<String, String> cache = new Hashtable<String, String>();
 
