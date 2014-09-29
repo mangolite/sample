@@ -6,12 +6,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <title>Hello WebSocket</title>
 
-<link type="text/css" rel="stylesheet"  href="/app/resources/css/compiled/bootstrap/bootstrap.css" />
+<link type="text/css" rel="stylesheet"
+	href="/app/resources/css/compiled/bootstrap/bootstrap.css" />
 
-<link type="text/css" rel="stylesheet"  href="/app/resources/css/compiled/skin/black/theme.css" />
+<link type="text/css" rel="stylesheet"
+	href="/app/resources/css/compiled/skin/black/theme.css" />
 
 <script type="text/javascript">
-	window.BrowserDetect = new (function(){
+	window.BrowserDetect = new (function() {
 		this.isBelowIE9 = false;
 	});
 </script>
@@ -32,11 +34,10 @@
 			enable Javascript and reload this page!</h2>
 	</noscript>
 	<div>
-	<b id="connect"">Connected</b>
-</div>
-	<div id="myform">
-
+		<b id="connect"">Connected</b>
 	</div>
+	<div id="myform"></div>
+	<div id="market_price" style="position: absolute; right: 0; top:0;"></div>
 </body>
 <script src="/app/resources/utils.config.js"></script>
 <script src="/app/resources/stompClient.js"></script>

@@ -27,15 +27,15 @@ public class ViewController {
 	}
 
 	@RequestMapping(value = "/utils", method = RequestMethod.GET)
-	public String utils(ModelAndView modelAndView, HttpServletResponse res, @RequestParam String uid)
-			throws IOException {
+	public String utils(ModelAndView modelAndView, HttpServletResponse res,
+			@RequestParam String uid) throws IOException {
 		res.addCookie(new Cookie("user", uid));
 		return "utils";
 	}
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test(Model model, String p, HttpServletResponse res, @RequestParam(required = false) String uid)
-			throws IOException {
+	public String test(Model model, String p, HttpServletResponse res,
+			@RequestParam(required = false) String uid) throws IOException {
 		String uidTemp = (uid == null) ? "0" : uid;
 		res.addCookie(new Cookie("user", uidTemp));
 		model.addAttribute("user", uidTemp);
@@ -52,8 +52,13 @@ public class ViewController {
 		return "dashboard";
 	}
 
-	@RequestMapping(value = "/template", method = RequestMethod.GET)
-	public String template(ModelAndView modelAndView, String p) throws IOException {
-		return "template/" + p;
+	@RequestMapping(value = "/template/*", method = RequestMethod.GET)
+	public String template(ModelAndView modelAndView, String _handler)
+			throws IOException {
+		if (_handler == null) {
+			return "template/defaultView";
+		} else {
+			return "template/" + _handler;
+		}
 	}
 }
