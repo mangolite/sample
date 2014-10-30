@@ -1,41 +1,44 @@
-//utils.require('dff.son');
-//utils.require('dff.father','dff.son','dff.grandfather');
 utils.define("dff.init").as(function(init) {
-	//var g = dff.grandfather.instance();
-	//var f = dff.father.instance();
-	//var S = utils.module('dff.son');
-	//var s = utils.module('dff.son').instance("Ram");
-	//var s2 = dff.son.instance("Ramesh");
-	//console.log(s2.title);
 	
-/*	
-	utils.require('utils.custom.tag');
+	utils.require('utils.custom','utils.custom.tag');
+	utils.require('dff.formattypes',':jqgeeks/jquery-ui',":jqgeeks/bootstrap");
+	//Importing dependencies
+	var SON_MODULE = utils.module('dff.son');
+	var son_insatnce = SON_MODULE.instance();
+	//Alt : var son_insatnce = utils.module('dff.son').instance();
+	var stomp = utils.module('stompClient');
+	var template = utils.module('utils.template');
 	
-	init.templ =  utils.require('dff.mytemp').instance(
-			{"content":"original","topic":null,"message":{"name":null},"tags":[{"id":"0","name":"A"},{"id":"2","name":"B"}]}
-			,$('#myform'));
-	
-	init.templ.data.sub('a.b',function(a,b,c,d){
-		console.log('a.b',a,b,c,d)
-	});
-	
-	init.templ.data.sub('a.*',function(a,b,c,d){
-		console.log('a.*',a,b,c,d)
-	});
-	
+	/**
+	 * _ready_ method is triggered when module is loaded and
+	 * doc is ready to handler DOM operations
+	 */
 	init._ready_ = function(){
-		dff.init.templ.data.patch({"~message":[{"name":"not hello"}],"~tags":[{"+2":{"id":"3","name":"C"}},{"+3":{"id":"4","name":"E"}}],"tags":{"~0":[{"id":"5"},{"name":"F"}],"~1":[{"name":"D"}]},"~":[{"topic":"newTopic"}]})
-		df
-		f.init.templ.data.patch({"~tags":[{"-3":0}]})
-		console.log("len==",init.templ.data.data.tags.length);
-	};*/
-	
-	//utils.loadPackage("jqgeeks/utils_widget","jqgeeks/utils_main");
-	utils.module('mytemplate').instance({ 
-		data : { 
-			name : {fname : "Lalit"}
-		},
-		$parent : $('#myform')
-	});
+		
+		init.templ = utils.module('sampledata').instance({ 
+			handler : 'sampledata',
+			data : { 
+				detail : { price : "0" , volume : 0 , rate :0}
+			},
+			$parent : $('#myform')
+		});
+		
+		init.templ2 = template.load({ 
+			handler : 'market_price',
+			data : { 
+				detail : { price : "0" , volume : 0 , rate :0}
+			},
+			$parent : $('#market_price')
+		});
+    	
+		/*
+		 * Subscribing to broadcast event
+		 */
+		stomp.event.on('market_price',function(a,b,c,d){
+			//console.log('a',a,b,c)
+    		init.templ2.update({detail :a })
+    	});
+		
+	}
 	
 });

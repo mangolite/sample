@@ -8,8 +8,9 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		if(this[name]) throw new Error('Cannot create bus with name"'+name + '"');
 		this[name] = resolver;
 		if(this[name].isDefault) defaultBus = name;
+		resolver.busName = name;
 		resolver.on = function(eName,listner){
-			return stompClient.on(this.path(),eName,listner);
+			return stompClient.on(this.busName,eName,listner);
 		}
 	};
 	function setConnected(connected) {
@@ -21,22 +22,12 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		var socket = new SockJS('/app/tunnel');
 		//console.info('connecting with userid:',userID)
 		sClient = Stomp.over(socket);
+		sClient.noDebug = true;
 		sClient.connect({},function(frame) {
 			setConnected(true);
 		    whoami = frame.headers['user-name'];
 //		    console.log('Connected: ',frame,frame.headers,whoami);
 		    ready = true;
-		    stompClient.setChannel('user',{
-		    	path : function(bus,eName){
-		    		return userQueue + eName;
-		    	},
-		    	isDefault : true
-		    })
-		    stompClient.setChannel('event',{
-		    	path : function(bus,eName){
-		    		return "/event/" + eName;
-		    	}
-		    })
 		    stompClient.onconnected();
 		});
 	}
@@ -51,7 +42,7 @@ utils.define('stompClient', function(stompClient, _instance_) {
 	};
 
 	var subscribe = function(bus,eName,listner){
-		//console.log(bus,eName,listner)
+		//console.info("subscribe",bus,eName,listner)
 		if(stompClient[bus]){
 			sClient.subscribe(stompClient[bus].path(bus,eName), function(msg){
 				var data = JSON.parse(msg.body);
@@ -89,6 +80,17 @@ utils.define('stompClient', function(stompClient, _instance_) {
 		
 	};
 	stompClient._ready_ = function(){
+	    stompClient.setChannel('user',{
+	    	path : function(bus,eName){
+	    		return userQueue + eName;
+	    	},
+	    	isDefault : true
+	    })
+	    stompClient.setChannel('event',{
+	    	path : function(bus,eName){
+	    		return "/event/" + eName;
+	    	}
+	    });
 		connect($('body').attr('data-user') || cookies.read('user'));
 	}
 })

@@ -1,10 +1,7 @@
-/**
- * Copyright (c) - 2014, Dion Global Solutions. Company confidential.
- */
 package com.web.models;
 
 /**
- * @author <a mailto:lalit.tanwar@dionglobal.com> Lalit Tanwar</a>
+ * @author <a href="mailto:lalit.tanwar07@gmail.com">Lalit Tanwar</a>
  * @version 1.0
  * @lastModified Sep 3, 2014
  */

@@ -1,11 +1,12 @@
-
+<%@ taglib uri="/WEB-INF/tags/customTags.tld"  prefix="tt"%>
 <div>
 	<p>
-		Price<input class="tag" type="text" data-path="detail.price" id="name" />
+		Price<input class="tag" type="text" data-path="detail.price" id="name"
+			formatType="number" />
 	</p>
 	<p>
 		Volume<input class="tag" type="text" data-path="detail.volume"
-			id="name" />
+			formatType="number" id="name" />
 	</p>
 	<p>
 		Details : <b><span data-path="detail.price"></span>/<span

@@ -44,7 +44,7 @@ utils.define('sampledata').extend('utils.abstracts.template').as(function(sample
     	console.info('_ready_ : instance is ready');
     	var THIS = this;
     	this.on('DataChange', 'details.price',function(a,b,c,d){
-    		console.info('name.fname',a,b,c,d)
+    		console.info('DataChange :',a,b,c,d)
     	});
     	this.on('detail.price',function(a,b,c,d){
     		console.info('detail.price',a,b,c,d)

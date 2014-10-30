@@ -1,6 +1,3 @@
-/**
- * Copyright (c)  2014, Dion Global Solutions. Company confidential.
- */
 package com.web.app;
 
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -9,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.webutils.WebContextUtil;
 
 /**
- * @author <a mailto:lalit.tanwar@dionglobal.com> Lalit Tanwar</a>
+ * @author <a href="mailto:lalit.tanwar07@gmail.com">Lalit Tanwar</a>
  * @version 1.0
  * @lastModified Sep 10, 2014
  */

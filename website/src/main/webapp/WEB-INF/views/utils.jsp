@@ -6,9 +6,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <title>Hello WebSocket</title>
 
-<link type="text/css" rel="stylesheet"
+<!-- <link type="text/css" rel="stylesheet"
 	href="/app/resources/css/compiled/bootstrap/bootstrap.css" />
-
+ -->
 <link type="text/css" rel="stylesheet"
 	href="/app/resources/css/compiled/skin/black/theme.css" />
 
