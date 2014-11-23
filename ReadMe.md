@@ -8,7 +8,9 @@ Requirments
 	c) inside origojava run this - $ git submodule update (regular command ot update libraries)
 
 3) install Gradle
-	http://www.gradle.org/installation
+	for gradle - http://www.gradle.org/installation
+	get STS plugin - http://dist.springsource.com/release/TOOLS/gradle
+	import project as gradle project.
 	inside origojava/website/
 	$ gradle refresh  (-often run this command to load java dependency)
 
