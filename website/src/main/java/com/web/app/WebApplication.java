@@ -63,6 +63,7 @@ public class WebApplication extends SpringBootServletInitializer {
 		List<String> urlPatterns = new ArrayList<String>();
 		urlPatterns.add("*.js");
 		urlPatterns.add("*.css");
+		urlPatterns.add("*.json");
 		registrationBean.setUrlPatterns(urlPatterns);
 		registrationBean.setFilter(compressingFilter);
 		return registrationBean;
