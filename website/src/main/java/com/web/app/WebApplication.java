@@ -60,11 +60,8 @@ public class WebApplication extends SpringBootServletInitializer {
 
 		ResourceMinifyFilter compressingFilter = new ResourceMinifyFilter();
 		FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-		List<String> urlPatterns = new ArrayList<String>();
-		urlPatterns.add("*.js");
-		urlPatterns.add("*.css");
-		urlPatterns.add("*.json");
-		registrationBean.setUrlPatterns(urlPatterns);
+		registrationBean.setUrlPatterns(compressingFilter
+				.getResourcerlPatterns());
 		registrationBean.setFilter(compressingFilter);
 		return registrationBean;
 
