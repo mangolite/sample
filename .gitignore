@@ -42,8 +42,6 @@ Servers
 obj
 work
 libs
-website/src/main/webapp/lib/
-website/src/main/webapp/lib
 
 # minification files #
 ######################
