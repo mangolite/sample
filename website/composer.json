@@ -6,6 +6,7 @@
     
     "require": {
     	"jqgeeks/bootstrap": "dev-master",
-    	"jqgeeks/utils": "dev-master"
+	"jqgeeks/utils": "dev-master",
+    	"jqgeeks/vutils": "dev-master"
     }
 }
