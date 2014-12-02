@@ -3,7 +3,7 @@ utils.define('stompClient', function(stompClient, _instance_) {
 	var userID,userQueue;
 	var ready;
 	var defaultBus;
-	var cookies = utils.require('utils.cookies');
+	var cookies = utils.module('utils.cookies');
 	stompClient.setChannel = function(name,resolver){
 		if(this[name]) throw new Error('Cannot create bus with name"'+name + '"');
 		this[name] = resolver;

@@ -7,6 +7,7 @@
     "require": {
     	"jqgeeks/bootstrap": "dev-master",
 	"jqgeeks/utils": "dev-master",
-    	"jqgeeks/vutils": "dev-master"
+    	"jqgeeks/vutils": "dev-master",
+    	"jqgeeks/poplee": "dev-master"
     }
 }
