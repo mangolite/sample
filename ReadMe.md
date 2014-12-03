@@ -13,11 +13,16 @@ Requirments
 	import project as gradle project.
 	inside origojava/website/
 	$ gradle refresh  (-often run this command to load java dependency)
+	a) Ubuntu gradle command - http://www.code-republic.com/?p=48
 
 4) install Composer
 	https://getcomposer.org/
 	inside origojava/website/
 	$ composer install	(run this first time)
 	$ composer update	( run this regularly to load javascript dependency)
+	
+	
+	
+
 
 
