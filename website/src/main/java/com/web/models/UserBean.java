@@ -1,6 +1,8 @@
 package com.web.models;
 
-public class UserBean {
+import com.webutils.AbstractUser;
+
+public class UserBean extends AbstractUser{
 	private String username;
 	private String password;
 	private String firstName;

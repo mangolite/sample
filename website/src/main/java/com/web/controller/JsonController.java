@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.web.models.HelloMessage;
+import com.web.models.UserBean;
 
 @Controller
 public class JsonController {
@@ -20,8 +21,13 @@ public class JsonController {
 	@ResponseBody
 	public HelloMessage home(ModelAndView modelAndView, HttpServletRequest request) throws IOException {
 		HelloMessage hm = new HelloMessage();
-		HttpSession session = request.getSession(true);	    
-        session.setAttribute("currentSessionUser",user); 
+		HttpSession session = request.getSession(true);	
+		UserBean user = new UserBean();
+		//user.auth();
+		
+		if(user.isValid()){
+			session.setAttribute("currentSessionUser",user); 
+		}
 		return hm;
 	}
 }

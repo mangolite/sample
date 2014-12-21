@@ -28,7 +28,7 @@ import com.web.ResourceMinifyFilter;
  * @lastModified Aug 19, 2014
  */
 @EnableAutoConfiguration
-@ComponentScan(basePackages = { "com.web.controller", "com.web.config" })
+@ComponentScan(basePackages = { "com.web.controller", "com.web.config","com.web.app" })
 public class WebApplication extends SpringBootServletInitializer {
 
 	private static final Log LOG = new Log();

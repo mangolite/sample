@@ -3,7 +3,7 @@ package com.web.handler;
 import com.web.engine.DataEngine;
 import com.web.engine.SampleData;
 import com.webutils.AbstractHandler;
-import com.webutils.WebContextUtil;
+import com.webutils.WebAppContext;
 import com.webutils.annotations.ActionHandler;
 import com.webutils.annotations.HandlerAction;
 
@@ -22,7 +22,7 @@ public class SampleDataHandler extends AbstractHandler {
 	@HandlerAction(name = "price_updated")
 	public void getData2(SampleData data) {
 		try {
-			engine.addData(WebContextUtil.getUserToken(),data);
+			engine.addData(WebAppContext.getUserToken(),data);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
