@@ -55,12 +55,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://gitlab.com/jqgeeks/bootstrap.git",
-                "reference": "774a46bda6b70ff19620dddbb267c6192ba30f50"
+                "url": "https://gitlab.com/webmodules/bootstrap.git",
+                "reference": "6d481d0b8881b820028b2db8f1859343433f2e32"
             },
             "require": {
                 "frameworks/bootstrap": "3.2.*",
-                "jqgeeks/jquery": ">=1.3.0"
+                "webmodules/jquery": ">=1.3.0"
             },
             "suggest": {
                 "fortawesome/font-awesome": "4.1.0 - Allows more advanced features",
@@ -76,15 +76,15 @@
                 "api",
                 "rudra"
             ],
-            "time": "2014-10-27 18:05:40"
+            "time": "2014-12-04 09:40:14"
         },
         {
             "name": "jqgeeks/jquery",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://gitlab.com/jqgeeks/jquery.git",
-                "reference": "2948c6edbf8ade26ffd6bfefc5493c4abdbdf701"
+                "url": "https://gitlab.com/webmodules/jquery.git",
+                "reference": "632fb2ed30b834ed4e5ef397b490a33bf48b715e"
             },
             "require": {
                 "frameworks/jquery": "2.*"
@@ -99,7 +99,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2014-09-28 09:05:54"
+            "time": "2014-12-04 09:40:33"
         },
         {
             "name": "jqgeeks/mvc",
@@ -107,7 +107,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/mvc.git",
-                "reference": "8a68f6a5032960ce9f6b6165f897149daeff7493"
+                "reference": "c136d7fdc87655b2fa3725a3dc1341f824e554c8"
             },
             "require": {
                 "jqgeeks/utils": ">=1.0.0",
@@ -123,7 +123,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2014-12-03 12:37:20"
+            "time": "2014-12-04 21:09:11"
         },
         {
             "name": "jqgeeks/observable",
@@ -181,7 +181,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/tunnel.git",
-                "reference": "378c5dd0302f260ed91436b9c31cd2f57233d969"
+                "reference": "92d17446299a6685a723d01de51f13463cc71264"
             },
             "require": {
                 "jqgeeks/jquery": ">=1.3.0",
@@ -197,7 +197,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2014-11-30 16:36:44"
+            "time": "2014-12-18 11:39:30"
         },
         {
             "name": "jqgeeks/utils",
@@ -205,7 +205,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/utils.git",
-                "reference": "74e80d3a99efd87d3035211b0baf34e44ef09a58"
+                "reference": "b7775c659399c0ee507510b499bdfca3aafa3709"
             },
             "require": {
                 "jqgeeks/jquery": ">=1.3.0"
@@ -220,7 +220,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2014-12-02 19:58:46"
+            "time": "2014-12-18 21:24:21"
         },
         {
             "name": "jqgeeks/vutils",
@@ -245,6 +245,29 @@
                 "rudra"
             ],
             "time": "2014-12-02 20:00:13"
+        },
+        {
+            "name": "webmodules/jquery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/webmodules/jquery.git",
+                "reference": "632fb2ed30b834ed4e5ef397b490a33bf48b715e"
+            },
+            "require": {
+                "frameworks/jquery": "2.*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "JQuery Utilitties compatible with rudrax framework",
+            "keywords": [
+                "api",
+                "rudra"
+            ],
+            "time": "2014-12-04 09:40:33"
         },
         {
             "name": "webmodules/rivets",

@@ -12,6 +12,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.FilterType;
 
 import com.utils.Log;
 import com.web.ResourceMinifyFilter;
@@ -28,7 +30,8 @@ import com.web.ResourceMinifyFilter;
  * @lastModified Aug 19, 2014
  */
 @EnableAutoConfiguration
-@ComponentScan(basePackages = { "com.web.controller", "com.web.config","com.web.app" })
+@ComponentScan(basePackages = { "com.web.controller", "com.web.config","com.web.app" },
+	excludeFilters = { @ComponentScan.Filter(value = Controller.class, type = FilterType.ANNOTATION) })
 public class WebApplication extends SpringBootServletInitializer {
 
 	private static final Log LOG = new Log();

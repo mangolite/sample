@@ -14,7 +14,7 @@ import com.webutils.AccessInterceptor;
  * @version 1.0
  * @lastModified Aug 19, 2014
  */
-//@Configuration
+@Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.web.controller" })
 public class SpringMvcConfig extends WebMvcConfigurerAdapter {
