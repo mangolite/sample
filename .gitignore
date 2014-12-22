@@ -30,6 +30,7 @@
 .project
 .classpath
 .springBeans
+.DS_Store
 
 # Folders #
 ###########
