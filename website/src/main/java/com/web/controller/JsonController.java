@@ -8,25 +8,27 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.web.models.HelloMessage;
+import com.web.models.AuthResponse;
 import com.web.models.UserBean;
+import com.webutils.WebAppContext;
 
 @Controller
 public class JsonController {
 
 	@RequestMapping(value = "/json/auth", method = RequestMethod.GET)
 	@ResponseBody
-	public HelloMessage home(ModelAndView modelAndView, HttpServletRequest request) throws IOException {
-		HelloMessage hm = new HelloMessage();
-		HttpSession session = request.getSession(true);	
-		UserBean user = new UserBean();
-		//user.auth();
-		
+	public AuthResponse home(ModelAndView modelAndView, HttpServletRequest request,
+			@RequestParam String username,@RequestParam String password) throws IOException {
+		AuthResponse hm = new AuthResponse();
+		UserBean user = (UserBean) WebAppContext.getUser();
+		user.auth(username,password);
 		if(user.isValid()){
-			session.setAttribute("currentSessionUser",user); 
+			hm.setSessionID(user.getSessionID());
+			hm.setSuccess(true);
 		}
 		return hm;
 	}

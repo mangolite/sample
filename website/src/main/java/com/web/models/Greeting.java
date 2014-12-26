@@ -7,7 +7,7 @@ public class Greeting {
 
 	private String content;
 	private String topic;
-	private HelloMessage message;
+	private AuthResponse message;
 	private List<Tag> tags = new LinkedList<Tag>();
 
 	public Greeting(String content) {
@@ -34,11 +34,11 @@ public class Greeting {
 		this.tags = tags;
 	}
 
-	public HelloMessage getMessage() {
+	public AuthResponse getMessage() {
 		return message;
 	}
 
-	public void setMessage(HelloMessage message) {
+	public void setMessage(AuthResponse message) {
 		this.message = message;
 	}
 

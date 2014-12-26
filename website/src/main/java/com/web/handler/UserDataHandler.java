@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import com.web.app.MessageClient;
-import com.web.models.HelloMessage;
+import com.web.models.AuthResponse;
 import com.web.models.Name;
 import com.web.models.UserDetails;
 import com.webutils.AbstractHandler;
@@ -39,12 +39,12 @@ public class UserDataHandler extends AbstractHandler {
 	 * @return the greeting
 	 */
 	@HandlerAction(name = "get_data")
-	public UserDetails getData(HelloMessage message) {
+	public UserDetails getData(AuthResponse message) {
 		return user;
 	}
 
 	@HandlerAction(name = "get_data2")
-	public UserDetails getData2(HelloMessage message, HelloMessage message2) {
+	public UserDetails getData2(AuthResponse message, AuthResponse message2) {
 		return user;
 	}
 

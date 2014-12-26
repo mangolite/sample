@@ -1,13 +1,15 @@
 package com.web.models;
 
 import com.webutils.AbstractUser;
+import com.webutils.annotations.RxModel;
+import com.webutils.annotations.RxModel.ModelType;
 
-public class UserBean extends AbstractUser{
+@RxModel(ModelType.USER)
+public class UserBean extends AbstractUser {
 	private String username;
 	private String password;
 	private String firstName;
 	private String lastName;
-	public boolean valid;
 
 	public String getFirstName() {
 		return firstName;
@@ -41,11 +43,10 @@ public class UserBean extends AbstractUser{
 		username = newUsername;
 	}
 
-	public boolean isValid() {
-		return valid;
-	}
-
-	public void setValid(boolean newValid) {
-		valid = newValid;
+	@Override
+	public void auth(String userName, String passWord) {
+		if("admin".equals(userName)){
+			this.isValid(true);
+		}
 	}
 }

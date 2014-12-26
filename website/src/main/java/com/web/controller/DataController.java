@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 
 import com.web.app.AppClient;
 import com.web.models.Greeting;
-import com.web.models.HelloMessage;
+import com.web.models.AuthResponse;
+import com.webutils.AbstractResponse;
 import com.webutils.WebAppContext;
 import com.webutils.WebSockRequest;
 
@@ -21,13 +22,13 @@ public class DataController {
 
 	@MessageMapping("/hello")
 	@SendTo("/event/greetings")
-	public Greeting greeting(HelloMessage message) throws Exception {
+	public Greeting greeting(AuthResponse message) throws Exception {
 		// Thread.sleep(3000); // simulated delay
-		return new Greeting("Hello, " + message.getName() + "!");
+		return new Greeting("Hello, " + "!");
 	}
 
 	@MessageMapping("/wsr/{handlerName}/{actionName}")
-	public Object wrappedRequest(WebSockRequest message,
+	public AbstractResponse wrappedRequest(WebSockRequest message,
 			@DestinationVariable("handlerName") String handlerName,
 			@DestinationVariable("actionName") String actionName)
 			throws Exception {
