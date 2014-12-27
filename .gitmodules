@@ -4,3 +4,9 @@
 [submodule "libs/webutils"]
 	path = libs/webutils
 	url = https://gitlab.com/laniamspringsolutions/webutils.git
+[submodule "origo_serv"]
+	path = origo_serv	
+	url = https://gitlab.com/origoxtreme-pvt-ltd/origo_serv.git
+[submodule "origo_web"]
+	path = origo_web
+	url = https://gitlab.com/origoxtreme-pvt-ltd/origo_web.git
