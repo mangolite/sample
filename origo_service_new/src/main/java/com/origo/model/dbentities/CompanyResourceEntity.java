@@ -45,7 +45,7 @@ public class CompanyResourceEntity {
 	private Integer resourceId;
 
 	@ManyToOne
-	@JoinColumn(name="ORIGO_ID", insertable=false, updatable=false, nullable=false)
+//	@JoinColumn(name="ORIGO_ID", insertable=false, updatable=false, nullable=false)
 	private CompanyProfileEntity company;
 
 	/**

@@ -2,6 +2,9 @@
 package com.origo.services.test.endpoints;
 //---------------------------------------------------------------------
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,6 +39,7 @@ public abstract class AbstractUserServiceTests {
 	@Transactional
 	public void addCompanyProfile() throws Exception {
 		
+
 		CompanyProfileEntity companyProfile = new CompanyProfileEntity();
 		companyProfile.setCompanyCEOName("Tony Stark");
 		companyProfile.setYearEstablishedIn(2000);
@@ -43,18 +47,32 @@ public abstract class AbstractUserServiceTests {
 		companyProfile.setProfileActiveFlag('Y');
 		companyProfile.setName("Microsoft");
 		companyProfile.setIndustryType("Softwarae");
-		companyProfile.setEmployeeCount(2000000);
 		companyProfile.setCompanyDesc("Leader in manufacturing of Motherboard");
+		companyProfile.setEmployeeCount(2000000);
 		companyProfile.setCompanyStockCode("MS");
 		// Product
-		
 		ProductEntity prodEntity = new ProductEntity();
+		prodEntity.setCompany(companyProfile);
+		prodEntity.setProductName("AntiVirus");
+		prodEntity.setProductSpecification("total size : 3 mb");
+		prodEntity.setProductDesc("latest revised updates for all types of malwares".getBytes());
 		
-		
+		ProductEntity prodEntity2 = new ProductEntity();
+		prodEntity2.setCompany(companyProfile);
+		prodEntity2.setProductName("iphone");
+		prodEntity2.setProductSpecification("13 mb camera");
+		prodEntity2.setProductDesc("phone bigger than previous one".getBytes());
+
+			
+		List<ProductEntity> prodList = new ArrayList<ProductEntity>();
+		prodList.add(prodEntity);
+		prodList.add(prodEntity2);
+		companyProfile.setProductEntity(prodList);
 		// Resources
 		
 		
 		//Contacts
+		
 		
 		//Address
 		
@@ -66,6 +84,7 @@ public abstract class AbstractUserServiceTests {
 		this.userServiceInterface.saveCompanyEntity(companyProfile);
 		}catch(Exception e){
 			e.printStackTrace();
+			System.out.println("--------------ERROR -------------");
 		}
 	}
 

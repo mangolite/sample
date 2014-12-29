@@ -41,12 +41,12 @@ public class ProductEntity {
 	}
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "PRODUCT_ID")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer productId;
 	
 	@ManyToOne
-	@JoinColumn(name="ORIGO_ID", insertable=false, updatable=false,nullable=false)
+//	@JoinColumn(name="ORIGO_ID", updatable=false,nullable=false)
 	private CompanyProfileEntity company;
 	
 	/**
@@ -66,7 +66,7 @@ public class ProductEntity {
 	 */
 	@Lob
 	@Column(name = "PRODUCT_DESC")
-	private String productDesc;
+	private byte[] productDesc;
 	
 	/**
 	 * This field indicates the active flag of the product.
@@ -114,11 +114,11 @@ public class ProductEntity {
 		this.productSpecification = productSpecification;
 	}
 
-	public String getProductDesc() {
+	public byte[] getProductDesc() {
 		return productDesc;
 	}
 
-	public void setProductDesc(String productDesc) {
+	public void setProductDesc(byte[] productDesc) {
 		this.productDesc = productDesc;
 	}
 

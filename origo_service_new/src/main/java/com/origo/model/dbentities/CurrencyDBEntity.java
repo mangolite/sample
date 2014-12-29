@@ -93,7 +93,7 @@ public class
 	 The default constructor of the  CurrencyEntity
 	**/
 	public CurrencyDBEntity () {
-		
+		super();
 	}
 	//--------------------------------------------------------------------------	
 }		

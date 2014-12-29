@@ -22,6 +22,7 @@ Date		Version		Author			Description
 ------------------------------------------------------------------------------*/
 package com.origo.model.dbentities;
 //-----------------------------------------------------------------------------
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -41,7 +41,7 @@ import javax.persistence.UniqueConstraint;
 		@UniqueConstraint(columnNames = "ORIGO_ID")
 		} 
 )
-public class CompanyProfileEntity extends BaseUserEntity{
+public class CompanyProfileEntity extends BaseUserEntity implements Serializable{
 	
 	public CompanyProfileEntity(){
 		super();
