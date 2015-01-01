@@ -5,11 +5,13 @@ package com.origo.services.test.endpoints;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.mapping.Array;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.origo.model.dbentities.CompanyProfileEntity;
+import com.origo.model.dbentities.CompanyResourceEntity;
 import com.origo.model.dbentities.ProductEntity;
 import com.origo.services.apps.endpoints.UserService;
 import com.origo.services.apps.interfaces.UserServiceInterface;
@@ -70,11 +72,20 @@ public abstract class AbstractUserServiceTests {
 		companyProfile.setProductEntity(prodList);
 		// Resources
 		
+		CompanyResourceEntity cre = new CompanyResourceEntity();
+		cre.setCompany(companyProfile);
+		cre.setResourceName("Iphone Manual");
+		
+		List<CompanyResourceEntity> resourceList = new ArrayList<CompanyResourceEntity>();
+		resourceList.add(cre);
+		
+		companyProfile.setResourceDetailsEntity(resourceList);
 		
 		//Contacts
 		
 		
 		//Address
+		
 		
 		// AmountCurrency
 		

@@ -41,12 +41,12 @@ public class ProductEntity {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "PRODUCT_ID")
 	private Integer productId;
 	
 	@ManyToOne
-//	@JoinColumn(name="ORIGO_ID", updatable=false,nullable=false)
+	@JoinColumn(name="ORIGO_ID_FK", updatable=false,nullable=false)
 	private CompanyProfileEntity company;
 	
 	/**
