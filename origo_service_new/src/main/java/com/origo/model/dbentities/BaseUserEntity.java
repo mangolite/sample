@@ -39,7 +39,7 @@ public class BaseUserEntity {
 	 * This is primary key of the table. 
 	 */
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ORIGO_ID", unique = true, nullable = false)
 	public Integer id;
 	

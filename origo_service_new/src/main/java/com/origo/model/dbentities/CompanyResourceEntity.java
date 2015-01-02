@@ -40,12 +40,12 @@ public class CompanyResourceEntity {
 	}
 	
 	@Id
-	@Column(name = "RESOURCE_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "RESOURCE_ID")
 	private Integer resourceId;
 
 	@ManyToOne
-//	@JoinColumn(name="ORIGO_ID", insertable=false, updatable=false, nullable=false)
+	@JoinColumn(name="ORIGO_ID_FK", updatable=false, nullable=false)
 	private CompanyProfileEntity company;
 
 	/**
