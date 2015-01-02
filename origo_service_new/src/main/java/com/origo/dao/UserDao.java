@@ -25,6 +25,7 @@ package com.origo.dao;
 import java.util.Collection;
 import com.origo.model.dbentities.BaseUserEntity;
 import com.origo.model.dbentities.CompanyProfileEntity;
+import com.origo.model.dbentities.OrigoChannelUserEntity;
 import com.origo.model.dbentities.UserProfileEntity;
 //-----------------------------------------------------------------------------
 public interface UserDao {
@@ -74,7 +75,7 @@ public interface UserDao {
 	 * @param userType
 	 * @return
 	 */
-	BaseUserEntity findEntityByEmailId (
+	OrigoChannelUserEntity findEntityByEmailId (
 		String emailId
 	, 	String userType
 	) throws Exception;
@@ -85,6 +86,6 @@ public interface UserDao {
 	 * @param origoId
 	 * @return
 	 */
-	BaseUserEntity findEntityByOrigoId(String origoId) throws Exception;
+	BaseUserEntity findEntityByOrigoId(OrigoChannelUserEntity origoChannelUserEntity) throws Exception;
 	
 }	

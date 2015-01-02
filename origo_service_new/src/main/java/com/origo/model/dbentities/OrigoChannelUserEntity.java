@@ -88,8 +88,19 @@ public class OrigoChannelUserEntity {
     @Column(name = "DATE_LASTLOGIN",length=1)
     @Type(type="timestamp")
     private Date lastLoginDate;
+    
+    @Column(name="type")
+    private String type;
 
-    public Integer getIdUser() {
+    public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public Integer getIdUser() {
 		return idUser;
 	}
 

@@ -40,6 +40,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.origo.dao.UserDao;
 import com.origo.model.dbentities.BaseUserEntity;
 import com.origo.model.dbentities.CompanyProfileEntity;
+import com.origo.model.dbentities.OrigoChannelUserEntity;
 import com.origo.model.dbentities.UserProfileEntity;
 import com.origo.services.apps.endpoints.UserService;
 //-----------------------------------------------------------------------------
@@ -115,20 +116,28 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public BaseUserEntity findEntityByEmailId(String emailId, String userType)
+	public OrigoChannelUserEntity findEntityByEmailId(String emailId, String userType)
 			throws Exception {
-		
-		return null;
+		Session session=mysqlSessionFactory.getCurrentSession();
+		Query query = session.createQuery("from OrigoChannelUserEntity as origoUser where origoUser.emailId= :emailId and origoUser.type=:userType" );
+		query.setParameter("emailId", emailId);
+		query.setParameter("userType", userType);
+		OrigoChannelUserEntity origoChannelUserEntity=(OrigoChannelUserEntity) query.list().get(0);
+		return origoChannelUserEntity;
 	}
 
 	@Override
-	public BaseUserEntity findEntityByOrigoId(String origoId) throws Exception {
+	public BaseUserEntity findEntityByOrigoId(OrigoChannelUserEntity origoChannelUserEntity) throws Exception {
 		
 		 // using 'join fetch' because a single query should load both owners and pets
         // using 'left join fetch' because it might happen that an owner does not have pets yet
    //     Query query = this.em.createQuery("SELECT owner FROM Owner owner left join fetch owner.pets WHERE owner.id =:id");
   //      query.setParameter("id", id);
-		return null;
+		Session session=mysqlSessionFactory.getCurrentSession();
+		Query query = session.createQuery("from CompanyProfileEntity as companyProfile where companyProfile.id=:origoId" );
+		query.setParameter("origoId", origoChannelUserEntity.getIdUser());
+		BaseUserEntity baseUserEntity=(BaseUserEntity) query.list().get(0);
+		return baseUserEntity;
 		
 	}
 

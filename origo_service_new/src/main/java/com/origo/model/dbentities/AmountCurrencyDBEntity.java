@@ -51,9 +51,9 @@ public  class
 	@Column(name="ORIGO_ID", unique=true, nullable=false)
 	@GeneratedValue(generator="gen")
 	@GenericGenerator(name="gen", strategy="foreign", parameters=@Parameter(name="property", value="employee"))
-	private Long origoId;
+	private int origoId;
 	
-	public Long getOrigoId() {
+	public int getOrigoId() {
 		return origoId;
 	}
 	
@@ -116,7 +116,7 @@ public  class
 		type
 	;
 
-	public void setOrigoId(Long origoId) {
+	public void setOrigoId(int origoId) {
 		this.origoId = origoId;
 	}
 	

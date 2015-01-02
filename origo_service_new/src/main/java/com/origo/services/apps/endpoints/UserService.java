@@ -1,7 +1,6 @@
 package com.origo.services.apps.endpoints;
-//-----------------------------------------------------------------------
+//------------------------------------------------------------------------
 import java.util.Collection;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.origo.dao.UserDao;
 import com.origo.model.dbentities.BaseUserEntity;
 import com.origo.model.dbentities.CompanyProfileEntity;
+import com.origo.model.dbentities.OrigoChannelUserEntity;
 import com.origo.model.dbentities.UserProfileEntity;
 import com.origo.services.apps.interfaces.UserServiceInterface;
 //-----------------------------------------------------------------------
@@ -77,17 +77,19 @@ public class UserService implements UserServiceInterface{
 
 	@Override
     @Transactional(readOnly = true)
-	public BaseUserEntity findEntityByEmailId(String emailId, String userType)
+	public OrigoChannelUserEntity findEntityByEmailId(String emailId, String userType)
 			throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		OrigoChannelUserEntity origoChannelUserEntity=userDao.findEntityByEmailId(emailId, userType);
+		return origoChannelUserEntity;
 	}
 
 	@Override
     @Transactional(readOnly = true)
-	public BaseUserEntity findEntityByOrigoId(String origoId) throws Exception {
+	public BaseUserEntity findEntityByOrigoId(OrigoChannelUserEntity origoChannelUserEntity) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		BaseUserEntity baseUserEntity=userDao.findEntityByOrigoId(origoChannelUserEntity);
+		return baseUserEntity;
 	}
 
 	

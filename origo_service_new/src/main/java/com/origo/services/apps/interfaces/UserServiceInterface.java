@@ -25,6 +25,7 @@ package com.origo.services.apps.interfaces;
 import java.util.Collection;
 import com.origo.model.dbentities.BaseUserEntity;
 import com.origo.model.dbentities.CompanyProfileEntity;
+import com.origo.model.dbentities.OrigoChannelUserEntity;
 import com.origo.model.dbentities.UserProfileEntity;
 //------------------------------------------------------------------------
 /**
@@ -80,7 +81,7 @@ public interface UserServiceInterface {
 	 * @param userType
 	 * @return
 	 */
-	BaseUserEntity findEntityByEmailId (
+	OrigoChannelUserEntity findEntityByEmailId (
 		String emailId
 	, 	String userType
 	) throws Exception;
@@ -91,6 +92,6 @@ public interface UserServiceInterface {
 	 * @param origoId
 	 * @return
 	 */
-	BaseUserEntity findEntityByOrigoId(String origoId) throws Exception;
+	BaseUserEntity findEntityByOrigoId(OrigoChannelUserEntity origoChannelUserEntity) throws Exception;
 	
 }	
