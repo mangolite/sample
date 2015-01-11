@@ -10,3 +10,6 @@
 [submodule "origo_web"]
 	path = origo_web
 	url = https://gitlab.com/origoxtreme-pvt-ltd/origo_web.git
+[submodule "rudraxhelp"]
+	path = rudraxhelp
+	url = https://gitlab.com/rudrax-projects/rudraxhelp.git
