@@ -1,9 +1,3 @@
-[submodule "libs/utils"]
-	path = libs/utils
-	url = https://gitlab.com/laniamspringsolutions/utils.git
-[submodule "libs/webutils"]
-	path = libs/webutils
-	url = https://gitlab.com/laniamspringsolutions/webutils.git
 [submodule "origo_service"]
 	path = origo_service
 	url = https://gitlab.com/origoxtreme-pvt-ltd/origo_service.git
