@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<annotation-driven />
+
+	<!-- Scans the classpath of the application for @Components to deploy. In 
+		short Spring considers this as the base directory of the application -->
+	<context:component-scan base-package="com.dffweb.controller" />
+
+	<!-- Configure aspects. -->
+
+	<!-- DffResourceBundleMessageSource MessageResource -->
+	<beans:bean id="messageResource" class="com.dfferentia.utils.MessageResource">
+		<beans:property name="messageSource" ref="messageSource" />
+	</beans:bean>
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources location="/resources/" mapping="/resources/**" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<!-- For loading the text stored in a .properties file for internationalization 
+		purpose -->
+
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<beans:property name="basenames" value="/resources/i18n/messageResources" />
+		<beans:property name="fallbackToSystemLocale" value="false" />
+		<beans:property name="defaultEncoding" value="UTF-8" />
+	</beans:bean>
+
+	<!-- Configures Handler Interceptors -->
+
+	<!-- Changes the locale when a 'locale' request parameter is sent. e.g. 
+		querystring ?lang in the URL is sent to get the locale -->
+	<beans:bean id="localeChangeInterceptor"
+		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<beans:property name="paramName" value="lang" />
+	</beans:bean>
+
+	<!-- This resolver bean will first store the locale in a cookie and then 
+		get the locale from the cookie that may be stored on user's computer or use 
+		the default 'en' locale -->
+	<beans:bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<!-- beans:property name="defaultLocale" value="es" / -->
+		<!-- in seconds. If set to -1, the cookie is not persisted (deleted when 
+			browser shuts down) -->
+		<beans:property name="cookieMaxAge" value="-1" />
+		<beans:property name="cookieName" value="lang" />
+	</beans:bean>
+
+	<interceptors>
+		<!-- Changes the locale when a 'locale' request parameter is sent; e.g. 
+			/?locale=de -->
+		<beans:bean
+			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+	</interceptors>
+	
+	
+	
+	<beans:bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+	<!-- This handler bean will intercept all requests and process the URL to 
+		look for value of the ?lang querystring -->
+	<beans:bean id="annotationMapper"
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<beans:property name="interceptors">
+			<beans:list>
+				<beans:ref bean="localeChangeInterceptor" />
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+	<!-- For the Image File Upload in Client Admin - Admin Settings - Customize 
+		page -->
+<!-- 	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" /> -->
+
+</beans:beans>

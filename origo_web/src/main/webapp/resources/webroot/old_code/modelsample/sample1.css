@@ -1,0 +1,51 @@
+/*
+Error: Invalid CSS after "...column-count(2)": expected "{", was ";"
+        on line 4 of /Users/lalittanwar/Project/websocket/origo_web/src/main/webapp/resources/webroot/modelsample/sample1.scss
+
+1: @import "compass/css3";
+2:  
+3: #two-column {
+4:   @include column-count(2);
+5:   width: 300px;
+6:   margin-bottom: 20px;
+7: }
+8:  
+9: #three-column {
+
+Backtrace:
+/Users/lalittanwar/Project/websocket/origo_web/src/main/webapp/resources/webroot/modelsample/sample1.scss:4
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:1166:in `expected'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:1101:in `expected'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:1096:in `tok!'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:641:in `block'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:661:in `block_child'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:650:in `block_contents'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:642:in `block'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:635:in `ruleset'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:660:in `block_child'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:653:in `block_contents'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/scss/parser.rb:42:in `parse'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/engine.rb:393:in `_to_tree'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/engine.rb:268:in `render'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
+org/jruby/RubyArray.java:1613:in `each'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/bin/compass:30:in `(root)'
+org/jruby/RubyProc.java:271:in `call'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/gems/compass-1.0.3/bin/compass:44:in `(root)'
+org/jruby/RubyKernel.java:1081:in `load'
+/Users/lalittanwar/Project/websocket/origo_web/build/tmp/jrubyExec-compass/bin/compass:23:in `(root)'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...column-count(2)\": expected \"{\", was \";\"\A         on line 4 of /Users/lalittanwar/Project/websocket/origo_web/src/main/webapp/resources/webroot/modelsample/sample1.scss\A \A 1: @import \"compass/css3\";\A 2:  \A 3: #two-column {\A 4:   @include column-count(2);\A 5:   width: 300px;\A 6:   margin-bottom: 20px;\A 7: }\A 8:  \A 9: #three-column {"; }

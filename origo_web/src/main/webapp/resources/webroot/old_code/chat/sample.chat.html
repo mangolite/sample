@@ -1,0 +1,7 @@
+<input rx-value="model.message.text">
+<button rx-on-click="send_clicked"> Send </button>
+<ul>
+  <li rx-each-todo="model.msgs">
+    <span>{todo.text}</span>
+  </li>
+<ul>

@@ -1,0 +1,39 @@
+  <!--Document Section Starts-->
+                	<div class="information_form" id="document">
+                        <div class="head1">
+                            Document Section
+                        </div>
+                        <form id="documents" method="post" action="">
+                        	<div class="adddocument">
+                                <div class="comon_style">
+                                    <span>
+                                        <i class="fa fa-list-alt"></i>
+                                    </span>
+                                    <input name="docname" id="docname" type="text" placeholder="Document Name1" title="Document Name" />
+                                </div>
+                                <div class="comon_style">
+                                    <input id="docfile" name="docfile" type="file" style="display:none">
+                                    <div class="input-append">
+                                        <a class="btn" onclick='$("input[id=docfile]").click();' title="Upload Document">Browse</a>
+                                        <input id="photoCover" class="input-large" type="text">
+                                    </div>
+                                </div>
+                                <cite id="addNew1">
+                                        <i class="fa fa-plus-square"></i> <b class="ad_clr">Click to Add Additional Fields</b>
+                                </cite>
+                            </div>
+                            <div class="form_btn">
+                            	<div class="prev">
+                                    <i class="fa fa-arrow-circle-o-left" id="prev_icon"></i>
+                                    <input name="Previous" type="submit" value="Previous" onclick="submitbtn()" id=""/>
+                                </div>
+                                <p class="text-center">Skip . . .</p>
+                                <div class="only_nxt">
+                                    <i class="fa fa-arrow-circle-o-right" id="next_icon"></i>
+                                    <input name="Next" type="submit" value="Next" onclick="submitbtn()" id=""/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                <!--Document Section Ends-->
+                

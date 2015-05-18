@@ -1,0 +1,19 @@
+{
+    "config": {
+        "vendor-dir": "src/main/webapp/resources/weblibs"
+    },
+    "minimum-stability": "dev",
+    
+    "require": {
+    	"twbs/bootstrap-sass": "3.3.4",
+		"jqgeeks/utils": "dev-master",
+    	"spamjs/boot_navbar" : "dev-master",
+    	"spamjs/boot_sidebar" : "dev-master",
+    	"webmodules/dummy-json" : "dev-master",
+    	"jqutils/cache" : "dev-master",
+    	"jqutils/jsonutil" : "dev-master",
+    	"jqgeeks/jqrouter" : "dev-master",
+    	"jqgeeks/jqtag": "dev-master",
+    	"jqtags/jq-switch": "dev-master"
+    }
+}

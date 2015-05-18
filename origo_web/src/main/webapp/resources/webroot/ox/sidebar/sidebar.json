@@ -1,0 +1,34 @@
+{
+	
+	"header" : "John Doe",
+	"items" : [
+		{
+			"title" : "Dashboard",
+			"icon_class" : "glyphicon glyphicon-home" 
+		},{
+			"title" : "My Profile",
+			"icon_class" : "glyphicon glyphicon-user" 	
+		},{
+			"title" : "Message",
+			"icon_class" : "glyphicon glyphicon-envelope" 
+		},{
+			"title" : "Timelines",
+			"icon_class" : "glyphicon glyphicon-home" 
+		},{
+			"title" : "Channels",
+			"icon_class" : "glyphicon glyphicon-home" 
+		},{
+			"title" : "Settings",
+			"items" : [
+				{
+					"title" : "ActionOne"
+				},{
+					"title" : "ActionTwo"		
+				},{
+					"title" : "ActionThree"
+				}
+			]
+		}
+		
+	]
+}

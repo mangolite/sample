@@ -1,0 +1,101 @@
+<header id="reg_head">
+	<include src="header.html" data=data.header />
+</header>
+<div class="container span12">
+	<div class="content_inner">
+		<div class="head">Welcome Guest!</div>
+		<div class="nav_buttons" id="com_info">
+			<div class="menu_tab user_active" id="generalinfo">
+				<span> <i class="fa fa-book"></i>
+				</span>
+				<p>General</p>
+				<!--<input name="general" type="button" id="generalinfo" value="General" class="user_active1" />-->
+			</div>
+			<div class="menu_tab" id="docu">
+				<span> <i class="fa fa-file-text-o"></i>
+				</span>
+				<p>Document</p>
+				<!--<input name="document" type="button" id="docu" value="Document" />-->
+			</div>
+			<div class="menu_tab" id="videosec">
+				<span> <i class="fa fa-video-camera"></i>
+				</span>
+				<p>Video</p>
+				<!--<input name="videosec" type="button" id="videosec" value="Video" />-->
+			</div>
+			<div class="menu_tab" id="visionsec">
+				<span> <i class="fa fa-eye"></i>
+				</span>
+				<p>Vision</p>
+				<!--<input name="visionsec" type="button" id="visionsec" value="Vision" />-->
+			</div>
+			<div class="menu_tab" id="products">
+				<span> <i class="fa fa-bar-chart"></i>
+				</span>
+				<p>Products</p>
+				<!--<input name="products" type="button" id="products" value="Products " />-->
+			</div>
+			<div class="menu_tab" id="services">
+				<span> <i class="fa fa-cogs"></i>
+				</span>
+				<p>Services</p>
+				<!--<input name="serv" type="button" id="serv" value="Services" />-->
+			</div>
+			<div class="menu_tab" id="contact">
+				<span> <i class="fa fa-envelope-o"></i>
+				</span>
+				<p>contact</p>
+				<!--<input name="contact" type="button" id="Contact" value="Contact" />-->
+			</div>
+			<!--<input name="resourcessec" type="button" id="resourcessec" value="Resources" />-->
+		</div>
+		<!--General Information Starts-->
+		<div class="information_form" id="information">
+			<include src="sec_gen.html" data={} />
+		</div>
+		<!--General Information Ends-->
+
+		<!--Document Section Starts-->
+		<div class="information_form" id="document">
+			<include src="sec_doc.html" data={} />
+		</div>
+		<!--Document Section Ends-->
+
+		<!--Video Section Starts-->
+		<div class="information_form" id="video">
+			<include src="sec_vdo.html" data={} />
+		</div>
+		<!--Video Section Ends-->
+
+		<!--Vision Section Starts-->
+		<div class="information_form" id="vision">
+		<include src="sec_vis.html" data={} />
+		</div>
+		<!--Vision Section Ends-->
+
+		<!--Products Section Starts-->
+		<div class="information_form" id="pro">
+		<include src="sec_prod.html" data={} />
+		</div>
+		<!--Products Section Ends-->
+
+		<!--Services Section Starts-->
+		<div class="information_form" id="serv">
+		<include src="sec_serv.html" data={} />
+		</div>
+		<!--Services Section Ends-->
+
+		<!--Contact  Section Starts-->
+		<div class="information_form" id="cont">
+		<include src="sec_cont.html" data={} />
+		</div>
+		<!--Contact Section Ends-->
+
+	</div>
+</div>
+<div class="md-overlay"></div>
+
+
+<footer>
+	<include src="footer.html" data={} />
+</footer>

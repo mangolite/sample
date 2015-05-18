@@ -1,0 +1,35 @@
+
+<div class="head1">Video Section</div>
+<form id="videos" method="post" action="">
+	<div class="adddocument1">
+		<div class="comon_style">
+			<span> <i class="fa fa-list-alt"></i>
+			</span> <input name="capname" id="capname" type="text"
+				placeholder="Caption Name1" title="Caption Name" />
+		</div>
+		<div class="comon_style">
+			<input id="vidfile" name="videoname" type="file"
+				style="display: none">
+			<div class="input-append">
+				<a class="btn" onclick="$('input[id=vidfile]').click();"
+					title="Upload Video">Browse</a> <input id="photoCover3"
+					class="input-large" type="text">
+			</div>
+		</div>
+		<cite id="addNew2"> <i class="fa fa-plus-square"></i> <b
+			class="ad_clr">Click to Add Additional Fields</b>
+		</cite>
+	</div>
+	<div class="form_btn">
+		<div class="prev">
+			<i class="fa fa-arrow-circle-o-left" id="prev_icon"></i> <input
+				name="Previous" type="submit" value="Previous" onclick="submitbtn()"
+				id="" />
+		</div>
+		<p class="text-center">Skip . . .</p>
+		<div class="only_nxt">
+			<i class="fa fa-arrow-circle-o-right" id="next_icon"></i> <input
+				name="Next" type="submit" value="Next" onclick="submitbtn()" id="" />
+		</div>
+	</div>
+</form>

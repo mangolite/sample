@@ -1,0 +1,9 @@
+{
+	"jquery" : 
+		[
+			{
+				"jquery" :  [ "../../frameworks/jquery/jquery.js"]
+			}
+		]
+}
+				

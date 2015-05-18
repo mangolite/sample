@@ -1,0 +1,24 @@
+<div class="container">
+	<form class="form-signin">
+	<jq-test name="Lalit">Say Something</jq-test>
+	<jq-switch id="sample" value=false></jq-switch>
+		<h2 class="form-signin-heading">Please sign in</h2>
+		<label for="inputEmail" class="sr-only">Email address</label> <input
+			type="email" rx-value="model.username" id="inputEmail"
+			class="form-control" placeholder="Email address" required=""
+			autofocus=""> <label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" class="form-control"
+			placeholder="Password" required="">
+		<div class="checkbox">
+			<label> <input type="checkbox" value="remember-me">
+				
+			</label>
+		</div>
+		<jq-switch id="rememberMe" value=false></jq-switch>
+		Remember me
+		<button class="btn btn-lg btn-primary btn-block" type="submit"
+			rx-on-click="login_clicked">Log in</button>
+
+	</form>
+	<button class="btn btn-lg btn-primary btn-block" type="submit"
+		rx-on-click="register_clicked">Register</button>

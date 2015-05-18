@@ -1,0 +1,14 @@
+{
+
+	"gen_info" : {
+		"cmpny_name" : "",
+		"stock_name" : "",
+		"stock_type" : "",
+		"ceo_name"	:	"",
+		"ind_type" : "",
+		"annual_revenue":"",
+		"currency_type"	: "",
+		"emp_head_count" : ""
+	}
+
+}

@@ -1,0 +1,51 @@
+<!--Products Section Starts-->
+                	<div class="information_form" id="pro">
+                        <div class="head1">
+                            Products Section
+                        </div>
+                        <form id="products" method="post" action="">
+                            <div class="comon_style">
+                               <span>
+                                   <i class="fa fa-list-alt"></i>
+                               </span>
+                               <input name="proname" id="proname" type="text" placeholder="Product Name" title="Products Name" />
+                             </div>
+                             <cite id="addNew3" class="pro_ser_con">
+                                        <i class="fa fa-plus-square"></i> <b class="ad_clr">Click to Add Additional Fields</b>
+                             </cite>
+                             <div class="comon_style1">
+                             	<textarea cols="100" id="editor2" name="editor2" rows="10"></textarea>
+                                <script>
+									// Replace the <textarea id="editor1"> with an CKEditor instance.
+									CKEDITOR.replace( 'editor2', {
+										on: {
+											focus: onFocus,
+											blur: onBlur,
+						
+											// Check for availability of corresponding plugins.
+											pluginsLoaded: function( evt ) {
+												var doc = CKEDITOR.document, ed = evt.editor;
+												if ( !ed.getCommand( 'bold' ) )
+													doc.getById( 'exec-bold' ).hide();
+												if ( !ed.getCommand( 'link' ) )
+													doc.getById( 'exec-link' ).hide();
+											}
+										}
+									});
+								</script>
+                             </div>
+                             <div class="form_btn">
+                                <div class="prev">
+                                      <i class="fa fa-arrow-circle-o-left" id="prev_icon"></i>
+                                      <input name="Previous" type="submit" value="Previous" onclick="submitbtn()" id=""/>
+                                </div>
+                                <p class="text-center">Skip . . .</p>
+                                <div class="only_nxt">
+                                    <i class="fa fa-arrow-circle-o-right" id="next_icon"></i>
+                                    <input name="Next" type="submit" value="Next" onclick="submitbtn()" id=""/>
+                                </div>
+                             </div>
+                        </form>
+                    </div>
+                <!--Products Section Ends-->
+                

@@ -1,0 +1,16 @@
+@import "../resources/weblibs/frameworks/bootstrap/css/bootstrap.css";
+@import "../resources/weblibs/frameworks/bootstrap/css/bootstrap-theme.css";
+@import "../resources/weblibs/jqtags/jq-switch/jqtags.switch.css";
+
+@import "webroot/ox/navbar/ox.navbar";
+@import "webroot/ox/sidebar/ox.sidebar";
+@import "webroot/ox/signup/register/ox.register.css";
+@import "webroot/ox/signup/login/ox.login";
+
+.module_border{
+	border : 1px solid black;
+}
+
+.ox-main {
+	height : 100%;
+}
