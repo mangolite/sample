@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6a7881d06acc59c5fd564dca5a7e5afe",
+    "hash": "a446a3d85d77344af1066aa5255952ca",
     "packages": [
         {
             "name": "jqgeeks/jqrouter",
@@ -36,7 +36,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/jqtag.git",
-                "reference": "f87c46e1289740c47eeb8017f9c5b33a71f726c6"
+                "reference": "38396c9e5944e234b8f4ac0de9b43ccc782664af"
             },
             "require": {
                 "jqgeeks/utils": ">=1.1.3",
@@ -53,7 +53,30 @@
                 "polymers",
                 "x-tags"
             ],
-            "time": "2015-04-29 15:49:58"
+            "time": "2015-05-19 18:26:10"
+        },
+        {
+            "name": "jqgeeks/tunnel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/jqgeeks/tunnel.git",
+                "reference": "fe38ca5f93693ec13783a62e71996368cd5743b8"
+            },
+            "require": {
+                "jqgeeks/utils": ">=1.0.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "JQuery Utilitties compatible with rudrax framework",
+            "keywords": [
+                "api",
+                "rudra"
+            ],
+            "time": "2015-05-08 15:40:45"
         },
         {
             "name": "jqgeeks/utils",
@@ -61,7 +84,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/utils.git",
-                "reference": "1c21f65d72943482cb53e801b74cfbe0e153e053"
+                "reference": "56c343cc6ba80fb20508fc67d79a6c87c92e3d61"
             },
             "require": {
                 "webmodules/foo": ">=0.0.4",
@@ -77,7 +100,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2015-05-13 14:29:24"
+            "time": "2015-05-19 18:06:13"
         },
         {
             "name": "jqtags/jq-switch",
@@ -109,7 +132,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqutils/cache.git",
-                "reference": "598c748a5f7c4353a91f8bb7001cf64f4ac8144d"
+                "reference": "24cab89571bbb00574c61d36c7085c95e8ca5397"
             },
             "require": {
                 "jqgeeks/utils": "dev-master"
@@ -126,7 +149,7 @@
                 "jqutils",
                 "spamjs"
             ],
-            "time": "2015-05-14 19:01:23"
+            "time": "2015-05-19 14:56:44"
         },
         {
             "name": "jqutils/jsonutil",
@@ -450,6 +473,7 @@
         "jqutils/cache": 20,
         "jqutils/jsonutil": 20,
         "jqgeeks/jqrouter": 20,
+        "jqgeeks/tunnel": 20,
         "jqgeeks/jqtag": 20,
         "jqtags/jq-switch": 20
     },
