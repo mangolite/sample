@@ -3,14 +3,10 @@ buildscript {
 		mavenLocal()
 		mavenCentral()
 		jcenter()
-//		maven {
-//            url uri('../libs/php-build-plugin/repo')
-//        }
 	}
 	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE") 
 		classpath ('org.ajoberstar:gradle-git:0.2.3')
 		classpath "com.github.robfletcher:compass-gradle-plugin:2.0.3"
-		//classpath 'org.swissphpfriends:php-build-plugin:1.0-SNAPSHOT'
 		//classpath 'com.dubture:composer-java-api:0.0.3'
 	}
 }

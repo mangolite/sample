@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"); 
+*{
+	margin:0;
+	padding:0;
+}
+/* Initial body */
+
+body {
+  left: 0;
+  position: relative;
+  margin:0;
+
+}
+
+/* Basic styling */
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.main{
+	background:#FFF;
+    width: 100%;  
+	margin:0 auto;
+
+	}
+	
+.navbar{
+	background:#32aed8;
+    width: 100%;
+	margin:0 auto;
+}
+.form-custom{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.logo{
+    font-family: 'Raleway', sans-serif;
+	margin-top:15px;
+	font-size:35px;
+	color:#FFF;
+	font-weight:bolder;
+	margin-right:25px;
+	}
+.logo:hover{
+	color:#FFF;}
+.hrStip {
+    border: 1px solid #7f7f7f;
+	border-spacing:0.5px;
+
+
+}
+.sign-in{
+	color:#00a2e8;
+	background-color:#FFF;
+	vertical-align: top;
+	}
+.email-header{
+	margin-top:-22px;}
+.pswd{
+	color:#FFF;
+	text-decoration:none;
+	}
+.pswd:hover{
+	text-decoration:underline;
+	color:#FFF;
+	}
+.login-img{
+	margin-top:25px;
+	}
+
+.tab-title{
+	font-family:"Roboto Slab";
+	font-size:20px;
+	margin-left:20px;
+	color:#247db3;}
+footer {
+    background-color: #32aed8;
+    width: 100%;
+	box-shadow: 0 2px 0 #6e6e6e inset, 0 2px 2px rgba(0, 0, 0, 0.4);
+	position:fixed;
+	left:0;
+	bottom:0;
+	clear:both;
+}
+.login_form{
+	padding-left:10px;
+}
+.user_login{
+	padding-top:10px;
+}
+.btn-blue {
+  background-color: #194d62;
+  height:34px;
+}
+.caret {
+  color: #FFF;
+}
+.input-group-addon{
+	border-radius:0;
+}
+.form-navbar-inner{
+	margin: 25px 0;
+    text-align: center;
+    width: 60%;
+}
+.navbar-top-links li {
+ 	background: none repeat scroll 0 0 #194d62;
+    color: #fff;
+    display: inline-block;
+    font-size: 10px;
+    margin: 25px;
+    padding: 5px;
+}
+.navbar-top-links li:last-child {
+  margin-left:25px;
+  margin-right: 0;
+}
+.btn-submit{
+	height:34px;
+}
+.custom-addon{
+	width:15px !important;
+}
+.workspace{
+	border-left: 1px solid #7f7f7f;
+	border-right: 1px solid #7f7f7f;
+	min-height:550px;
+}
+.container{
+	width:100%;
+}
+.dropdown-menu{
+	min-width:125px;
+}
+
+/* Tabs panel */
+.tabbable-panel {
+  padding: 20px;
+}
+
+/* Default mode */
+.tabbable-line > .nav-tabs {
+  border: none;
+  margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+  margin-right: 10px;
+}
+.tabbable-line > .nav-tabs > li > a {
+  border-top: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  background-color:#f1f1f1;
+  margin-right: 0;
+  color: #737373;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover >  {
+  border-bottom: 4px solid #91d1e7;
+}
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+  border-bottom: 4px solid #91d1e7;
+  background-color:#f1f1f1;
+  color: #333333;
+}
+.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+  color: #32aed8;
+}
+
+.tabbable-line > .nav-tabs > li.active {
+  border-bottom: 4px solid #32aed8;
+  border-top:1px solid #e2e2e2;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  border-left:1px solid #e2e2e2;
+  border-right:1px solid #e2e2e2;
+  position: relative;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+  border: 0;
+  color: #24a7df;
+  background-color: #f1f1f1;
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+.tabbable-line > .tab-content {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 0;
+  padding: 15px 0;
+}
+.portlet .tabbable-line > .tab-content {
+  padding-bottom: 0;
+}
+.navbar{
+	border-radius:0;
+	}
+
+@media (min-width:975px){
+.tab-title{
+		margin-top:70px;}
+	} 
+	
+.form-control, .btn{
+	border-radius:0px;
+}
+
+/* Sidebar Nav*/
+
+.sidebar-nav {
+    
+    margin: 0;
+    padding-top : 20px;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    /*text-indent: 10px;*/
+    line-height: 40px;
+    border-bottom: 1px solid #7f7f7f;
+    padding:5px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+    font-size:18px;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #000;
+    border-right: 5px solid #32aed8;
+    /* background: rgba(255,255,255,0.2);*/
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav li a i{
+	color:#32aed8;
+	padding-right:10px;
+	width:30px;
+}
+
