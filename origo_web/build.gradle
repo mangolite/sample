@@ -7,7 +7,6 @@ buildscript {
 	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE") 
 		classpath ('org.ajoberstar:gradle-git:0.2.3')
 		classpath "com.github.robfletcher:compass-gradle-plugin:2.0.3"
-		//classpath 'com.dubture:composer-java-api:0.0.3'
 	}
 }
 
@@ -16,7 +15,6 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: "com.github.robfletcher.compass"
-//apply plugin: 'php-build'
 
 jar {
 	baseName = 'gs-messaging-stomp-websocket'
@@ -31,17 +29,6 @@ repositories {
 	mavenCentral()
 	maven { url "http://repo.spring.io/libs-release" }
 }
-/*
-import org.ajoberstar.gradle.git.tasks.*
-task cloneGitRepo(type: GitClone) {
-	def destination = file("../libs/path")
-	uri = "https://gitlab.com/laniamspringsolutions/webutils.git"
-	destinationPath = destination
-	bare = false
-	enabled = !destination.exists() //to clone only once
-}
-*/
-//tasks["cloneGitRepo"].run()
 
 //Compass plugin config
 compass {
@@ -53,13 +40,6 @@ dependencies {
 	def springVersion = "3.1.0.RELEASE"
 	def tomcatVersion = "7.0.53"
 
-	// spring mvc
-	//compile "org.springframework:spring-webmvc:$springVersion"
-	//compile "org.springframework:spring-web:$springVersion"
-	//compile "org.springframework:spring-context:$springVersion"
-	//compile "org.springframework:spring-aspects:$springVersion"
-	
-
 	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
 
 	//WebSocket
@@ -67,10 +47,6 @@ dependencies {
 	compile("org.springframework:spring-messaging")
 	compile("org.reflections:reflections:0.9.9-RC1")
 	//compile 'org.springframework.session:spring-session:1.0.0.RELEASE'
-
-	//Minifier
-	//compile 'com.yahoo.platform.yui:yuicompressor:2.3.6'
-
 
 	// TODO: why are these required? need classification
 	compile "com.sun.jersey:jersey-client:1.5"
@@ -99,8 +75,23 @@ dependencies {
 
 task wrapper(type: Wrapper) { gradleVersion = '1.11' }
 
-task composerSync(type: Sync) {
-    from 'composer_packages'
-    into "src/main/webapp/resources/weblibs"
-   // dependsOn bowerInstall
+task resetComposer {
+ 	ant.propertyfile(
+        file: "config/application.properties") {
+        entry( key: "resources.static.lib-path", value: "/resources/weblibs/")
+    }
 }
+
+task composerSync(type: Sync) {
+    from 'src/main/webapp/resources/composer_packages'
+    into "src/main/webapp/resources/weblibs"
+    dependsOn resetComposer
+}
+
+task updateComposer {
+ 	ant.propertyfile(
+        file: "config/application.properties") {
+        entry( key: "resources.static.lib-path", value: "/resources/composer_packages/")
+    }
+}
+

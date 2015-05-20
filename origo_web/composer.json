@@ -1,6 +1,6 @@
 {
     "config": {
-        "vendor-dir": "src/main/webapp/resources/weblibs"
+        "vendor-dir": "src/main/webapp/resources/composer_packages"
     },
     "minimum-stability": "dev",
     
