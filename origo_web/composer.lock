@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a446a3d85d77344af1066aa5255952ca",
+    "hash": "54e141166c71ad8bb3265f05dc738c86",
     "packages": [
         {
             "name": "jqgeeks/jqrouter",
@@ -125,6 +125,30 @@
                 "x-tag"
             ],
             "time": "2015-05-12 16:59:15"
+        },
+        {
+            "name": "jqtags/jq-tab",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/jqtags/jq-tab.git",
+                "reference": "a2d615f1ddd66b25f33fd9eafb94114ac4cd5406"
+            },
+            "require": {
+                "jqgeeks/jqtag": ">=0.0.0"
+            },
+            "type": "tag",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "fancy bootstrap tab",
+            "keywords": [
+                "pitana",
+                "polymer",
+                "x-tag"
+            ],
+            "time": "2015-05-19 17:52:07"
         },
         {
             "name": "jqutils/cache",
@@ -475,7 +499,8 @@
         "jqgeeks/jqrouter": 20,
         "jqgeeks/tunnel": 20,
         "jqgeeks/jqtag": 20,
-        "jqtags/jq-switch": 20
+        "jqtags/jq-switch": 20,
+        "jqtags/jq-tab": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

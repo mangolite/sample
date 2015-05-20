@@ -1,0 +1,26 @@
+{
+  "name": "webmodules-foo",
+  "version": "0.0.3",
+  "main": "foo.js",
+  "description": "Module loader system detect and invoke",
+  "authors": [
+    "lalit.tanwar07@gmail.com"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/webmodule/foo.git"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "polyfils"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

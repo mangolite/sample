@@ -1,0 +1,13 @@
+{
+    "name": "jqutils/jsonutil",
+    "type": "utility",
+    "description":  "utils.json interceptor to create json from json template",
+    "homepage": "https://gitlab.com/jqgeeks/jsonutil",
+  	"author": "Lalit Tanwar",
+    "keywords": ["jqutils", "jqgeeks"],
+    "license": "MIT",
+    
+    "require": {
+      "webmodules/dummy-json" : "dev-master"
+    }
+}

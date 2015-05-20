@@ -1,0 +1,177 @@
+/* line 1, boot.sidebar.scss */
+body, html {
+  height: 100%;
+}
+
+/* remove outer padding */
+/* line 6, boot.sidebar.scss */
+.main .row {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Remove rounded coners*/
+/* line 12, boot.sidebar.scss */
+nav.sidebar.navbar {
+  border-radius: 0px;
+}
+
+/* line 16, boot.sidebar.scss */
+nav.sidebar, .main {
+  -webkit-transition: margin 200ms ease-out;
+  -moz-transition: margin 200ms ease-out;
+  -o-transition: margin 200ms ease-out;
+  transition: margin 200ms ease-out;
+}
+
+/* Add gap to nav and right windows.*/
+/* line 24, boot.sidebar.scss */
+.main {
+  padding: 10px 10px 0 10px;
+}
+
+/* .....NavBar: Icon only with coloring/layout.....*/
+/*small/medium side display*/
+@media (min-width: 768px) {
+  /*Allow main to be next to Nav*/
+  /* line 33, boot.sidebar.scss */
+  .main {
+    position: absolute;
+    width: calc(100% - 40px);
+    /*keeps 100% minus nav size*/
+    margin-left: 40px;
+    float: right;
+  }
+
+  /*lets nav bar to be showed on mouseover*/
+  /* line 41, boot.sidebar.scss */
+  nav.sidebar:hover + .main {
+    margin-left: 200px;
+  }
+
+  /*Center Brand*/
+  /* line 46, boot.sidebar.scss */
+  nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+  }
+
+  /*Center Brand*/
+  /* line 51, boot.sidebar.scss */
+  nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
+    text-align: center;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  /* line 56, boot.sidebar.scss */
+  nav.sidebar {
+    /*Center Icons*/
+    /*adds border top to first nav box */
+  }
+  /* line 58, boot.sidebar.scss */
+  nav.sidebar a {
+    padding-right: 13px;
+  }
+  /* line 62, boot.sidebar.scss */
+  nav.sidebar .navbar-nav > li:first-child {
+    border-top: 1px #e5e5e5 solid;
+  }
+
+  /*adds border to bottom nav boxes*/
+  /* line 69, boot.sidebar.scss */
+  nav.sidebar .navbar-nav > li {
+    border-bottom: 1px #e5e5e5 solid;
+  }
+
+  /* Colors/style dropdown box*/
+  /* line 74, boot.sidebar.scss */
+  nav.sidebar .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /*allows nav box to use 100% width*/
+  /* line 86, boot.sidebar.scss */
+  nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
+    padding: 0 0px 0 0px;
+  }
+
+  /*colors dropdown box text */
+  /* line 91, boot.sidebar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+
+  /*gives sidebar width/height*/
+  /* line 96, boot.sidebar.scss */
+  nav.sidebar {
+    width: 200px;
+    height: 100%;
+    margin-left: -160px;
+    float: left;
+    z-index: 8000;
+    margin-bottom: 0px;
+    /*give sidebar 100% width;*/
+    /* Move nav to full on mouse over*/
+    /*for hiden things when navbar hidden*/
+  }
+  /* line 104, boot.sidebar.scss */
+  nav.sidebar li {
+    width: 100%;
+  }
+  /* line 108, boot.sidebar.scss */
+  nav.sidebar:hover {
+    margin-left: 0px;
+  }
+  /* line 112, boot.sidebar.scss */
+  nav.sidebar .forAnimate {
+    opacity: 0;
+  }
+}
+/* .....NavBar: Fully showing nav bar..... */
+@media (min-width: 1330px) {
+  /*Allow main to be next to Nav*/
+  /* line 122, boot.sidebar.scss */
+  .main {
+    width: calc(100% - 200px);
+    /*keeps 100% minus nav size*/
+    margin-left: 200px;
+  }
+
+  /*Show all nav*/
+  /* line 128, boot.sidebar.scss */
+  nav.sidebar {
+    margin-left: 0px;
+    float: left;
+    /*Show hidden items on nav*/
+  }
+  /* line 132, boot.sidebar.scss */
+  nav.sidebar .forAnimate {
+    opacity: 1;
+  }
+}
+/* line 139, boot.sidebar.scss */
+nav.sidebar:hover {
+  cursor: pointer;
+}
+/* line 144, boot.sidebar.scss */
+nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {
+  color: #CCC;
+  background-color: transparent;
+}
+
+/* line 153, boot.sidebar.scss */
+nav:hover .forAnimate {
+  opacity: 1;
+}
+
+/* line 157, boot.sidebar.scss */
+section {
+  padding-left: 15px;
+}

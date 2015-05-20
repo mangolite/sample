@@ -1,0 +1,19 @@
+{
+	"name" : "webmodules/jquery",
+	"type" : "library",
+	"description" : "JQuery Fork Compatible with SPAMJS framework",
+	"license": "MIT",
+	"support": {
+		"irc": "irc://irc.freenode.org/jquery",
+		"issues": "http://bugs.jquery.com",
+		"forum": "http://forum.jquery.com",
+		"wiki": "http://docs.jquery.com/",
+		"source": "https://github.com/jquery/jquery"
+	},
+	"keywords" : [
+		"rudra",
+		"API"
+	],
+	"require" : {
+	}
+}

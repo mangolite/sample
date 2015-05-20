@@ -1,0 +1,26 @@
+{
+    "name": "webmodules/rivets",
+    "type": "library",
+    "description": "Rivets.js is a lightweight data binding and templating system that facilitates building data-driven views.",
+    "keywords": ["rudra", "API"],
+    "license": "MIT",
+    
+    "require": {
+    },
+    
+    "module_info" : {
+   		"modules" : [
+    		{
+				"name" : "rivets",    			
+				"file" : "dist/rivets.min.js"
+    		}
+    	],
+    	"bundles" : [
+    		{	
+    		 	"name" : "jqgeeks/rivets",
+    			"on_modules" : ["rivets"],
+    			"on_bundels" : [] 
+    		}
+    	] 
+    }
+}

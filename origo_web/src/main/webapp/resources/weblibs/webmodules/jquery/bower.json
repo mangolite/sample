@@ -1,0 +1,15 @@
+{
+  "name": "webmodules-jquery",
+  "main": "jquery.js",
+  "version": "2.1.3",
+  "homepage": "http://jquery.com",
+  "authors": [
+    "John Resig"
+  ],
+  "description": "jQuery compatible with SPAMJS framework",
+  "keywords": [
+    "jQuery",
+    "spamjs"
+  ],
+  "license": "MIT"
+}

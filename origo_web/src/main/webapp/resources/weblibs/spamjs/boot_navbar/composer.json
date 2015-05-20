@@ -1,0 +1,11 @@
+{
+    "name": "spamjs/boot_navbar",
+    "type": "spam",
+    "description": "A fancy sidebar",
+    "keywords": ["jqutils", "jqgeeks", "spam"],
+    "license": "MIT",
+    
+    "require": {
+		"spamjs/module": ">=1.0.0"
+    }
+}

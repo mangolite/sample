@@ -1,0 +1,519 @@
+[
+    {
+        "name": "twbs/bootstrap-sass",
+        "version": "v3.3.4",
+        "version_normalized": "3.3.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twbs/bootstrap-sass.git",
+            "reference": "1a5c521451d18e72ca57dea2af870ab552f4b42a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twbs/bootstrap-sass/zipball/1a5c521451d18e72ca57dea2af870ab552f4b42a",
+            "reference": "1a5c521451d18e72ca57dea2af870ab552f4b42a",
+            "shasum": ""
+        },
+        "time": "2015-03-16 16:23:24",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mark Otto"
+            },
+            {
+                "name": "Thomas McDonald"
+            },
+            {
+                "name": "Tristan Harward"
+            },
+            {
+                "name": "Peter Gumeson"
+            },
+            {
+                "name": "Gleb Mazovetskiy"
+            },
+            {
+                "name": "Jacob Thornton"
+            }
+        ],
+        "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.",
+        "homepage": "http://github.com/twbs/bootstrap-sass",
+        "keywords": [
+            "bootstrap",
+            "css",
+            "sass"
+        ]
+    },
+    {
+        "name": "webmodules/rivets",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/rivets.git",
+            "reference": "3916f04c9e7054ead2adc8ee538909791bb191b6"
+        },
+        "time": "2014-12-04 09:46:28",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Rivets.js is a lightweight data binding and templating system that facilitates building data-driven views.",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "webmodules/foo",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/foo.git",
+            "reference": "2ea63cfe97c4e975d16c4e1a6af10f4e780f1977"
+        },
+        "time": "2015-05-08 06:44:22",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Utilitties compatible with rudrax framework",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "webmodules/jquery",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/jquery.git",
+            "reference": "4c1098955e39ac30aac23a0e091bf35d389983b8"
+        },
+        "time": "2015-05-06 16:42:50",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Fork Compatible with SPAMJS framework",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "jqgeeks/utils",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqgeeks/utils.git",
+            "reference": "56c343cc6ba80fb20508fc67d79a6c87c92e3d61"
+        },
+        "require": {
+            "webmodules/foo": ">=0.0.4",
+            "webmodules/jquery": ">=1.3.0"
+        },
+        "time": "2015-05-19 18:06:13",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Utilitties compatible with rudrax framework",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "spamjs/module",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/spamjs/module.git",
+            "reference": "316eb8e04b71a710b6890ae654c8ef4a4e1ab129"
+        },
+        "require": {
+            "jqgeeks/utils": ">=1.2.6",
+            "webmodules/rivets": ">=0.7.1"
+        },
+        "time": "2015-05-14 05:58:35",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "An MVVM framework for single-page-application",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "spamjs/boot_navbar",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/spamjs/boot_navbar.git",
+            "reference": "4e686fab43c6b71c66aa1358802c0decbc67ad62"
+        },
+        "require": {
+            "spamjs/module": ">=1.0.0"
+        },
+        "time": "2015-03-14 23:48:24",
+        "type": "spam",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A fancy sidebar",
+        "keywords": [
+            "jqgeeks",
+            "jqutils",
+            "spam"
+        ]
+    },
+    {
+        "name": "spamjs/boot_sidebar",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/spamjs/boot_sidebar.git",
+            "reference": "c19b5eb68bbdc89d7516a7b144e0000a0a4773f7"
+        },
+        "require": {
+            "spamjs/module": ">=1.0.0"
+        },
+        "time": "2015-03-14 23:47:31",
+        "type": "spam",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A fancy sidebar",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "jqutils/cache",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqutils/cache.git",
+            "reference": "24cab89571bbb00574c61d36c7085c95e8ca5397"
+        },
+        "require": {
+            "jqgeeks/utils": "dev-master"
+        },
+        "time": "2015-05-19 14:56:36",
+        "type": "utility",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A cache utility to manage localStorage at instance level and caching js files on browser",
+        "homepage": "https://gitlab.com/jqutils/cache",
+        "keywords": [
+            "jqgeeks",
+            "jqutils",
+            "spamjs"
+        ]
+    },
+    {
+        "name": "webmodules/handlebars.js",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/handlebars.js.git",
+            "reference": "ffe5ec4feef477bbe0588b1967844a93e0a0e01c"
+        },
+        "time": "2015-05-08 14:19:45",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Chris Wanstrath",
+                "homepage": "http://chriswanstrath.com"
+            }
+        ],
+        "description": "Handlebars.js and Mustache are both logicless templating languages that keep the view and the code separated like we all know they should be.",
+        "homepage": "http://handlebarsjs.com",
+        "keywords": [
+            "handlebars",
+            "html",
+            "mustache"
+        ]
+    },
+    {
+        "name": "webmodules/dummy-json",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/dummy-json.git",
+            "reference": "5084dd4b7fff9e1e164d13539216df4a4eb5daa0"
+        },
+        "require": {
+            "webmodules/handlebars.js": ">=3.0.1"
+        },
+        "time": "2015-05-08 14:10:37",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Dummy JSON generator and templating",
+        "homepage": "https://github.com/webmodule/dummy-json",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "jqutils/jsonutil",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqutils/jsonutil.git",
+            "reference": "9d9837dd367b9fbd9c6942512e25f49257afd895"
+        },
+        "require": {
+            "webmodules/dummy-json": "dev-master"
+        },
+        "time": "2015-05-10 18:44:10",
+        "type": "utility",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "utils.json interceptor to create json from json template",
+        "homepage": "https://gitlab.com/jqgeeks/jsonutil",
+        "keywords": [
+            "jqgeeks",
+            "jqutils"
+        ]
+    },
+    {
+        "name": "jqgeeks/jqrouter",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqgeeks/jqrouter.git",
+            "reference": "4dac7a53e4d8f51d6a44f284ad924b91b5aa712a"
+        },
+        "require": {
+            "webmodules/foo": ">=0.0.0"
+        },
+        "time": "2015-04-26 19:27:23",
+        "type": "utility",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Simple UI URL Router",
+        "keywords": [
+            "controller",
+            "javascript",
+            "router"
+        ]
+    },
+    {
+        "name": "webmodules/webcomponentsjs",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/webcomponentsjs.git",
+            "reference": "a7ae34122c3db1149a25436c5e486b549dc52a95"
+        },
+        "time": "2015-05-04 17:59:17",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A suite of polyfills supporting the HTML Web Components specs: http://webcomponents.org/polyfills/",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "pitana/pitana.js",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pitana/pitana.js.git",
+            "reference": "49641a4113a13d20dfc5f4123ac57d6c57a6a2ca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pitana/pitana.js/zipball/49641a4113a13d20dfc5f4123ac57d6c57a6a2ca",
+            "reference": "49641a4113a13d20dfc5f4123ac57d6c57a6a2ca",
+            "shasum": ""
+        },
+        "require": {
+            "webmodules/webcomponentsjs": ">=0.5.2"
+        },
+        "time": "2015-05-03 09:41:43",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "pitana.js, framework for developing large scale modular JavaScript applications using Custom Elements",
+        "keywords": [
+            "framework",
+            "scalable",
+            "webcomponents"
+        ]
+    },
+    {
+        "name": "jqgeeks/jqtag",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqgeeks/jqtag.git",
+            "reference": "38396c9e5944e234b8f4ac0de9b43ccc782664af"
+        },
+        "require": {
+            "jqgeeks/utils": ">=1.1.3",
+            "pitana/pitana.js": "dev-master",
+            "webmodules/webcomponentsjs": ">=0.5.2"
+        },
+        "time": "2015-05-19 18:26:10",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A tag library to comply with jqgeeks/utils",
+        "keywords": [
+            "polymers",
+            "x-tags"
+        ]
+    },
+    {
+        "name": "jqtags/jq-switch",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqtags/jq-switch.git",
+            "reference": "699eb2f38cea64da5301e5c0fae732a8ae874bdf"
+        },
+        "require": {
+            "jqgeeks/jqtag": ">=0.0.0"
+        },
+        "time": "2015-05-12 16:59:15",
+        "type": "tag",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "fancy switch/checkbox button",
+        "keywords": [
+            "pitana",
+            "polymer",
+            "x-tag"
+        ]
+    },
+    {
+        "name": "jqgeeks/tunnel",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqgeeks/tunnel.git",
+            "reference": "fe38ca5f93693ec13783a62e71996368cd5743b8"
+        },
+        "require": {
+            "jqgeeks/utils": ">=1.0.0"
+        },
+        "time": "2015-05-08 15:40:35",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Utilitties compatible with rudrax framework",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "jqtags/jq-tab",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqtags/jq-tab.git",
+            "reference": "a2d615f1ddd66b25f33fd9eafb94114ac4cd5406"
+        },
+        "require": {
+            "jqgeeks/jqtag": ">=0.0.0"
+        },
+        "time": "2015-05-19 17:52:07",
+        "type": "tag",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "fancy bootstrap tab",
+        "keywords": [
+            "pitana",
+            "polymer",
+            "x-tag"
+        ]
+    }
+]

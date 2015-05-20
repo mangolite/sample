@@ -1,0 +1,12 @@
+{
+    "name": "jqtags/jq-switch",
+    "type": "tag",
+    "description": "fancy switch/checkbox button",
+    "keywords": ["x-tag", "polymer", "pitana"],
+    "license": "MIT",
+
+    "require": {
+      "jqgeeks/jqtag" : ">=0.0.0"
+    }
+    
+}

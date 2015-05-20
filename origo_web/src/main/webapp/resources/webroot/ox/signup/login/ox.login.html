@@ -1,24 +1,80 @@
-<div class="container">
-	<form class="form-signin">
-	<jq-test name="Lalit">Say Something</jq-test>
-	<jq-switch id="sample" value=false></jq-switch>
-		<h2 class="form-signin-heading">Please sign in</h2>
-		<label for="inputEmail" class="sr-only">Email address</label> <input
-			type="email" rx-value="model.username" id="inputEmail"
-			class="form-control" placeholder="Email address" required=""
-			autofocus=""> <label for="inputPassword" class="sr-only">Password</label>
-		<input type="password" id="inputPassword" class="form-control"
-			placeholder="Password" required="">
-		<div class="checkbox">
-			<label> <input type="checkbox" value="remember-me">
-				
-			</label>
-		</div>
-		<jq-switch id="rememberMe" value=false></jq-switch>
-		Remember me
-		<button class="btn btn-lg btn-primary btn-block" type="submit"
-			rx-on-click="login_clicked">Log in</button>
+<div id="wrapper">
 
-	</form>
-	<button class="btn btn-lg btn-primary btn-block" type="submit"
-		rx-on-click="register_clicked">Register</button>
+<header>
+	<include src="home/home_header.html" data={} />
+</header>
+
+
+<div class="main">
+ <div class="container">
+  <div class="row">
+  
+   <div class="login-img">
+     <img src="{{CONTEXT_PATH}}resources/origo/images/images/Login-Page_03.jpg" alt="login" class="col-md-8 col-sm-8 col-xs-12"> 
+   </div>
+   
+   <div class="col-md-4 col-sm-4 col-xs-12">
+      <h3 class="tab-title">Move Ahead! - It's free</h3>
+
+			<div class="tabbable-panel">
+				<jq-tab class="tabbable-line">
+					<ul class="nav nav-tabs ">
+						<li class="active">
+							<a href="#tab_default_1" data-toggle="tab">
+								<jq-tab-head value="user">USER</jq-tab-head>
+							</a>
+						</li>
+						<li>
+							<a href="#tab_default_2" data-toggle="tab">
+								<jq-tab-head value="company">COMPANY</jq-tab-head>
+							</a>
+						</li>
+				
+					</ul>
+					<div class="tab-content">
+						<jq-tab-pane value="user" class="tab-pane active" id="tab_default_1">
+                          <div class="form-group">
+			    		    <input class="form-control" placeholder="Email Address" name="email" type="text">
+			    		  </div>
+                          <div class="form-group user_login">
+			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    		  </div>
+							<p>
+								<a class="pull-right" href="#" target="_blank">
+									SignUp <i class="fa fa-sign-in"></i>
+								</a>
+							</p>
+						</jq-tab-pane>
+						<jq-tab-pane value="company" class="tab-pane" id="tab_default_2">
+				          <div class="form-group">
+			    		    <input class="form-control" placeholder="Company Email Address" name="email" type="text">
+			    		  </div>
+                          <div class="form-group user_login">
+			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    		  </div>
+							<p>
+								<a class="pull-right" href="#">
+									SignUp <i class="fa fa-sign-in"></i>
+								</a>
+							</p>
+						</jq-tab-pane>
+
+					</div>
+				</jq-tab>
+			</div>
+
+   </div>
+   
+  </div>
+ </div>
+</div>
+
+
+<footer></footer>
+
+
+</div>
+
+  
+ 
+     

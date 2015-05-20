@@ -1,0 +1,15 @@
+{
+    "name": "jqgeeks/jqtag",
+    "type": "library",
+    "description": "A tag library to comply with jqgeeks/utils",
+    "keywords": ["x-tags", "polymers"],
+    "license": "MIT",
+
+
+    "require": {
+      "jqgeeks/utils" : ">=1.1.3",
+      "webmodules/webcomponentsjs" : ">=0.5.2",
+      "pitana/pitana.js" : "dev-master"
+    }
+    
+}

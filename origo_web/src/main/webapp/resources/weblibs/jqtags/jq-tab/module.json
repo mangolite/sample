@@ -1,0 +1,14 @@
+{
+	"name" : "jqtags/jq-slider",
+	"modules" : [
+		{
+			"name" : "jqtags/jq-slider",
+			"js" : [
+				"jqtags.slider.js"
+			],
+			"css" : [],
+			"dependsOn" : []
+		}
+	]
+
+}

@@ -1,0 +1,15 @@
+{
+	"name" : "webmodules/dummy-json",
+	"type" : "library",
+	"description" : "Dummy JSON generator and templating",
+	"homepage" : "https://github.com/webmodule/dummy-json",
+	"author" : "Matt Sweetman,Lalit Tanwar",
+	"keywords" : [
+		"rudra",
+		"API"
+	],
+	"license" : "MIT",
+	"require" : {
+		"webmodules/handlebars.js" : ">=3.0.1"
+	}
+}

@@ -1,0 +1,11 @@
+{
+    "name": "spamjs/boot_sidebar",
+    "type": "spam",
+    "description": "A fancy sidebar",
+    "keywords": ["rudra", "API"],
+    "license": "MIT",
+    
+    "require": {
+		"spamjs/module": ">=1.0.0"
+    }
+}

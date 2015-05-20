@@ -102,3 +102,9 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) { gradleVersion = '1.11' }
+
+task composerSync(type: Sync) {
+    from 'composer_packages'
+    into "src/main/webapp/resources/weblibs"
+   // dependsOn bowerInstall
+}

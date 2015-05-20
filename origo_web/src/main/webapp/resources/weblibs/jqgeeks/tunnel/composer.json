@@ -1,0 +1,11 @@
+{
+    "name": "jqgeeks/tunnel",
+    "type": "library",
+    "description": "JQuery Utilitties compatible with rudrax framework",
+    "keywords": ["rudra", "API"],
+    "license": "MIT",
+    
+    "require": {
+       "jqgeeks/utils": ">=1.0.0"
+    }
+}

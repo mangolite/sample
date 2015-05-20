@@ -1,0 +1,25 @@
+{
+	
+	"header" : "MySideBar",
+	"items" : [
+		{
+			"title" : "Home"
+		},{
+			"title" : "Profile"		
+		},{
+			"title" : "Message"
+		},{
+			"title" : "Settings",
+			"items" : [
+				{
+					"title" : "ActionOne"
+				},{
+					"title" : "ActionTwo"		
+				},{
+					"title" : "ActionThree"
+				}
+			]
+		}
+		
+	]
+}

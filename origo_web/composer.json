@@ -15,6 +15,7 @@
     	"jqgeeks/jqrouter" : "dev-master",
     	"jqgeeks/tunnel": "dev-master",
     	"jqgeeks/jqtag": "dev-master",
-    	"jqtags/jq-switch": "dev-master"
+    	"jqtags/jq-switch": "dev-master",
+    	"jqtags/jq-tab": "dev-master"
     }
 }

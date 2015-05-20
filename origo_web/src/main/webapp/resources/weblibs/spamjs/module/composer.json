@@ -1,0 +1,14 @@
+{
+	"name" : "spamjs/module",
+	"type" : "library",
+	"description" : "An MVVM framework for single-page-application",
+	"keywords" : [
+		"rudra",
+		"API"
+	],
+	"license" : "MIT",
+	"require" : {
+		"jqgeeks/utils" : ">=1.2.6",
+		"webmodules/rivets" : ">=0.7.1"
+	}
+}
