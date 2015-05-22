@@ -43,10 +43,6 @@ Servers
 obj
 work
 
-# minification files #
-######################
-*min.css
-*-min.js
 
 # Other Files #
 ###############

@@ -44,12 +44,7 @@ test-output
 Servers
 obj
 work
-libs
 
-# minification files #
-######################
-*min.css
-*-min.js
 
 # Other Files #
 ###############
