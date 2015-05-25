@@ -1,30 +1,32 @@
 utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 	
 	utils.module('bootstrap');
-	var server = utils.module('tunnel.server');
-	var pipe = utils.module('tunnel.pipe');
-	var router = utils.module('jqrouter');
+	var PIPE = utils.module('tunnel.pipe');
+	var ROUTER = utils.module('jqrouter');
+	var USER = utils.module('ox.user');
 	//Load HTML tags
 	utils.require('jqtags.test','jqtags.switch');
 	
-	var main_module = null;
-
 	/**
 	 *  ._init_ is instance level event-method pre-defined and directed by spamjs.module
 	 * 
 	 */
 	_app_._init_ = function(){
 		var self = this;
-		self.pipe = pipe.instance();
-		self.router = router.instance();
+		self.pipe = PIPE.instance();
+		self.router = ROUTER.instance();
+		
 		/*
 		 * We will check if user is logged in or not 
 		 * 
 		 */
-		server.post("user/isValid").done(function(resp){
+		USER.validate().done(function(resp){
+			var MAIN_MODULE = utils.module("ox.main");
 			if(resp.success === true){
 					
-				self.load_main_module();
+				self.add(MAIN_MODULE.instance({
+					id : "super_module"
+				}));
 				
 			} else {
 				/*
@@ -34,7 +36,7 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 				var SIGNUP = utils.module("ox.signup");
 
 				self.add(SIGNUP.instance({
-					id : "signup"
+					id : "super_module"
 				}));
 
 				/*
@@ -45,44 +47,27 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 				 * here we are listeing to pipe event so that when login is done we can start main module
 				 * 
 				 */
-				self.pipe.on("ox.login.done", function(){
-					self.remove("signup")
-					self.load_main_module();
+				self.pipe.on("ox.user.login.done", function(){
+					self.add(MAIN_MODULE.instance({
+						id : "super_module"
+					}));
 				});
 			}
 			
-		});
-		
-	};
-	
-	_app_.load_main_module = function(){
-		var self = this;
-		self.add(utils.module("ox.navbar").instance());
-		self.add(utils.module("ox.sidebar").instance());
-		
-		main_module = utils.module("ox.main").instance();
-		self.add(main_module);
-		
-		/*
-		 * here we are listening to pipe event so that when main methis is ready wehn can bind-routing events
-		 * 
-		 */
-		self.pipe().on("ox.main.ready", function(){
-			app.add_routing(main_app);
-		});
+		});	
 		
 		/* 
 		 * Logout url Mapping
 		 */
-		router.on("/ox/logout",function(e){
+		self.router.on("/ox/logout",function(e){
 			/*
 			 * Tell server that user wants to logout
 			 */
-			server.post( "user/logout",{}).done(function(resp){
+			USER.unauth().done(function(resp){
 				/*
 				 * Server has invalidated the session, now reload the application to main page
 				 */
-				router.reload("/ox");
+				self.router.reload("/ox");
 			});
 		});
 		
@@ -94,33 +79,6 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 	};
 	
 	
-	/**
-	 *  A custom method to add url routing when user is logged in
-	 * 
-	 */
-	app.add_routing = function(){
-		
-		/**
-		 *  Custom method of app, to add module to main_module, it will unload the current app loaded
-		 *  in main_module and add specified module
-		 * 
-		 */
-		
-		router.on("/ox/home",function(e){
-			main_module.add(utils.module("ox.home").instance({
-				id : "main_module"
-			}));
-		});
-		
-		router.on("/ox/mywall",function(e){
-			main_module.add(utils.module("ox.mywall").instance({
-				id : "main_module"
-			}));
-		});
-
-	};
-	
-
 	/**
 	 * _ready_ method is triggered when module is loaded and
 	 * doc is ready to handler DOM operations

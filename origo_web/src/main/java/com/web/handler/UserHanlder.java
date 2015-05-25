@@ -23,7 +23,7 @@ public class UserHanlder extends AbstractHandler {
 		if (user.isValid()) {
 			model.setStatus("Already Validated");
 			resp.setSuccess(true);
-		} else if ("admin".equals(model.getUsername())) {
+		} else if (!"".equalsIgnoreCase(model.getUsername())) {
 			user.setUserName(model.getUsername());
 			user.setPassword(model.getPassword());
 			user.isValid(Boolean.TRUE);
