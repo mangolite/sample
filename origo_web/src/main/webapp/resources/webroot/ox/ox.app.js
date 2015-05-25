@@ -7,7 +7,6 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 	//Load HTML tags
 	utils.require('jqtags.test','jqtags.switch');
 	
-	var cur_module_id;
 	var main_module = null;
 
 	/**
@@ -17,6 +16,7 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 	_app_._init_ = function(){
 		var self = this;
 		self.pipe = pipe.instance();
+		self.router = router.instance();
 		/*
 		 * We will check if user is logged in or not 
 		 * 
@@ -88,6 +88,11 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 		
 	};
 	
+	_app_._remove_ = function(){
+		this.pipe.off();
+		this.router.off();
+	};
+	
 	
 	/**
 	 *  A custom method to add url routing when user is logged in
@@ -95,31 +100,27 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 	 */
 	app.add_routing = function(){
 		
+		/**
+		 *  Custom method of app, to add module to main_module, it will unload the current app loaded
+		 *  in main_module and add specified module
+		 * 
+		 */
+		
 		router.on("/ox/home",function(e){
-			app.add_module_to_main("home", "ox.home");
+			main_module.add(utils.module("ox.home").instance({
+				id : "main_module"
+			}));
 		});
 		
 		router.on("/ox/mywall",function(e){
-			app.add_module_to_main("mywall", "ox.mywall");
+			main_module.add(utils.module("ox.mywall").instance({
+				id : "main_module"
+			}));
 		});
 
 	};
 	
-	/**
-	 *  Custom method of app, to add module to main_module, it will unload the current app loaded
-	 *  in main_module and add specified module
-	 * 
-	 */
-	app.add_module_to_main = function(moduleId, moduleClass){
-		var MAIN_MODULE_CLASS = utils.module(moduleClass);
-		console.log("moduleClass",moduleClass)
-		main_module.remove(cur_module_id);
-		cur_module_id = moduleId;
-		main_module.add(MAIN_MODULE_CLASS.instance({
-			id : moduleId
-		}));
-	}
-	
+
 	/**
 	 * _ready_ method is triggered when module is loaded and
 	 * doc is ready to handler DOM operations
