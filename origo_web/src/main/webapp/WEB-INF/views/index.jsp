@@ -16,7 +16,7 @@
 	window.BrowserDetect.isBelowIE9 = true;
 </script>
 <![endif]-->
-<link href="/app/dist/ox.app.scss" rel="stylesheet"/>
+<link href="/app/dist/ox.app.css" rel="stylesheet"/>
 <script src="/app/resources/weblibs/webmodules/jquery/jquery.js"></script>
 <script src="/app/resources/weblibs/webmodules/foo/polyfills.js"></script>
 <script src="/app/resources/weblibs/webmodules/foo/foo.js"></script>
