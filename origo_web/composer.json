@@ -5,6 +5,8 @@
     "minimum-stability": "dev",
     
     "require": {
+    	"webmodules/bootstrap" : "dev-master",
+		"webmodules/bootstrap-social" : "dev-master",
     	"twbs/bootstrap-sass": "3.3.4",
 		"jqgeeks/utils": "dev-master",
     	"spamjs/boot_navbar" : "dev-master",

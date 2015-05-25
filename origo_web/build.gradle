@@ -94,3 +94,9 @@ task updateComposer << {
         entry( key: "resources.static.lib-path", value: "/resources/composer_packages/")
     }
 }
+
+//task zip(type:Zip) {
+// from ('composer_packages/')
+// into 'composer_packages' // note that this specifies path *in* the archive
+// destinationDir file('') // directory that you want your archive to be placed in
+//}

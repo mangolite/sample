@@ -1,0 +1,16 @@
+{
+    "name": "webmodules/bootstrap-social",
+    "type": "library",
+    "description": "JQuery Utilitties compatible with rudrax framework",
+    "keywords": ["rudra", "API"],
+    "license": "MIT",
+    
+    "require": {
+		"webmodules/bootstrap" : "dev-master",
+		"fortawesome/font-awesome": "4.1.0"
+    },
+    
+    "suggest": {
+        "webmodules/bootstrap" : "dev-master0 - Allows more advanced features"
+    }
+}

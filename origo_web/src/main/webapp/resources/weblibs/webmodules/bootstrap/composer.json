@@ -1,0 +1,17 @@
+{
+	"name" : "webmodules/bootstrap",
+	"type" : "library",
+	"description" : "Simple Bootstrap Fork Compatible with SPAMJS Specs",
+	"keywords" : [
+		"rudra",
+		"API"
+	],
+	"license" : "MIT",
+	"require" : {
+		"webmodules/jquery" : ">=2.1.2"
+	},
+	"suggest" : {
+		"fortawesome/font-awesome" : "4.1.0 - Allows more advanced features",
+		"kartik-v/bootstrap-star-rating" : "dev-master - Allows more advanced features"
+	}
+}

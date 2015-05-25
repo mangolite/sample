@@ -1,0 +1,21 @@
+{
+  "name": "webmodules-bootstrap",
+  "version": "3.2.2",
+  "homepage": "https://github.com/webmodule/bootstrap",
+  "authors": [
+    "\"\""
+  ],
+  "description": "Bootstrap compatible with spamjs framework",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "spamjs",
+    "bootstrap",
+    "webmodules"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "webmodules-jquery": "#>=2.1.2",
+  }
+}

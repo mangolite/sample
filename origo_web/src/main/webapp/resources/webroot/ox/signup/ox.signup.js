@@ -25,13 +25,13 @@ utils.define("ox.signup").extend('spamjs.module').as(function(signup,_instance_)
 			var REGISTER = utils.module("ox.register");
 			self.remove("login");
 			self.add("singup_body",REGISTER.instance({
-				id : "register"
+				id : "singup_body"
 			}));
 		}).on("/ox/login",function(){
 			var LOGIN = utils.module("ox.login");
 			self.remove("register");
 			self.add("singup_body",LOGIN.instance({
-				id : "login"
+				id : "singup_body"
 			}));
 		}).otherwise("ox/login");
 	};
