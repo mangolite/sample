@@ -83,7 +83,7 @@ task resetComposer {
 }
 
 task composerSync(type: Sync) {
-    from 'src/main/webapp/resources/composer_packages'
+    from 'composer_packages'
     into "src/main/webapp/resources/weblibs"
     dependsOn resetComposer
 }

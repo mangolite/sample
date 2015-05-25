@@ -1,6 +1,6 @@
 {
     "config": {
-        "vendor-dir": "src/main/webapp/resources/composer_packages"
+        "vendor-dir": "composer_packages"
     },
     "minimum-stability": "dev",
     
