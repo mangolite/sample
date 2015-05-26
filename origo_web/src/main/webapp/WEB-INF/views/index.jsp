@@ -17,7 +17,7 @@
 	window.BrowserDetect.isBelowIE9 = true;
 </script>
 <![endif]-->
-<link href="/app/dist/ox.app.css" rel="stylesheet"/>
+<link href="/app/resources/ox.app.scss" rel="stylesheet"/>
 </head>
 <body>
 
