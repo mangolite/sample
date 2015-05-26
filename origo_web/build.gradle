@@ -6,7 +6,7 @@ buildscript {
 	}
 	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE") 
 		classpath ('org.ajoberstar:gradle-git:0.2.3')
-		classpath "com.github.robfletcher:compass-gradle-plugin:2.0.5"
+		//classpath "com.github.robfletcher:compass-gradle-plugin:2.0.5"
 	}
 }
 
@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
-apply plugin: "com.github.robfletcher.compass"
+//apply plugin: "com.github.robfletcher.compass"
 
 jar {
 	baseName = 'gs-messaging-stomp-websocket'
