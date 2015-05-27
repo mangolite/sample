@@ -15,10 +15,7 @@ utils.define("ox.register").extend('spamjs.module').as(function(registration,_in
 		var self = this;
 		this.router.on("#/tab/{tab}", function(tab){
 			console.log("/tab/{tab}",tab)
-			self.load({
-				selector : ".register_module",
-				src : 'register.'+ tab +'.html',
-			});	
+			self.$$.find(".reg_tabs").val(tab)
 		}).otherwise("#/tab/general");
 	};
 	

@@ -5,7 +5,7 @@ utils.define("ox.app").extend("spamjs.module").as(function(app,_app_) {
 	var ROUTER = utils.module('jqrouter');
 	var USER = utils.module('ox.user');
 	//Load HTML tags
-	utils.require('jqtags.test','jqtags.switch');
+	utils.require('jqtags.test','jqtags.switch','jqtags.tab');
 	
 	/**
 	 *  ._init_ is instance level event-method pre-defined and directed by spamjs.module
