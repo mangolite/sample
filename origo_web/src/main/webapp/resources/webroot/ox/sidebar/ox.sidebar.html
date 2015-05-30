@@ -1,45 +1,46 @@
-<nav class="navbar navbar-inverse sidebar" role="navigation">
-	<div class="container-fluid">
-		<!--// Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#bs-sidebar-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<div class="navbar-brand" >
-				<div class="profile_pic_container">
-				
-				</div>
-				{{data.header}}
-			</div>
-		</div>
-		<div class="collapse navbar-collapse"
-			id="bs-sidebar-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<!-- for(var i in data.items){ -->
-					<!-- if(data.items[i].items){ -->
-						<li class="dropdown sideBarMenu"><a class="dropdown-toggle"
-							data-toggle="dropdown">Settings <span class="caret"></span><span
-								class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
-							<ul class="dropdown-menu forAnimate" role="menu">
-								<!-- for(var j in data.items[i].items){ -->
-									<!-- if(data.items[i].items[j].divided){ -->
-										<li class="divider"></li>
-									<!-- } -->
-									<li class="sideBarItem" data-item-key="{{data.items[i].items[j].key}}">
-										<a>{{data.items[i].items[j].title}}</a>
-									</li>
-								<!-- } -->
-							</ul>
-						</li>
-					<!-- } else { -->
-						<li class="active sideBarItem" ><a>{{data.items[i].title}}<span
-								class="sidebar_icon pull-left hidden-xs showopacity {{data.items[i].icon_class}}"></span></a></li>
-					<!-- } -->
-				<!-- }  -->
-			</ul>
-		</div>
-	</div>
-</nav>
+<div class="container">
+
+	<div class="main">
+		<div class="container board-container">
+			<div class="row" style="margin-top: 15px;">
+            <div class="col-md-2 col-sm-2" style=" text-align:center;"> <img
+						src="{{CONTEXT_PATH}}resources/origotheme/images/images/avtar2.png">
+                        
+                        
+ <nav class="navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px; padding-left:0; padding-right:0;">
+            <ul class="sidebar-nav nav navbar-nav">
+             
+    <li><a href="#"> <i class="fa fa-clipboard"></i> My Board </a>
+      <hr>
+    </li>
+    <li><a href="#"> <i class="fa fa-cogs"></i> My Profile </a>
+      <hr>
+    </li>
+    <li><a href="#"> <i class="fa fa-envelope-o"></i> Message </a>
+      <hr>
+    </li>
+    <li><a href="#"> <i class="fa fa-list-ul"></i> Timelines </a>
+      <hr>
+    </li>
+    <li><a href="#"> <i class="fa fa-stack-exchange"></i> Channels </a></li>
+  </ul>
+          
+            
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>                       
+  
+  
+  
+</div>

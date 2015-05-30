@@ -1,11 +1,17 @@
-<div>
-<div id="topbar">
+<div id="wrapper">
+	<header id="inner_topbar">
+	</header>
+	<div class="hrStip"></div>
+
+	<include src="../sidebar/ox.sidebar.html" data={} />
+
+<div class="col-md-8 col-sm-8 workspace" style="margin-top:15px;">
+	<include src="../midwall/ox.midwall.html" data={} />
 </div>
-<div id="main">
 
-<a href="#&x=y">X+Y</a>
+	<div class="col-md-2 col-sm-2">
+			<include src="../rightbar/ox.rightbar.html" data={} />
+	</div>
 
 </div>
-</div>
-
-
+<footer></footer>

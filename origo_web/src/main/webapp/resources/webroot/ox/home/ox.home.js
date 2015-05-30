@@ -1,23 +1,19 @@
 utils.define("ox.home").extend('spamjs.module').as(function(home,_instance_) {
 	
 	var STOMP = utils.module('tunnel.stomp');
-	var NAVBAR = utils.module('ox.navbar');
+	var TOPBAR = utils.module('ox.topbar');
 	
 	//module Initializer
 	_instance_._init_ = function(){
 		//Set View
+		var self = this;
 		this.view('ox.home.html').done(function(){
 			console.info("ox.home.html is loaded and set to view")
 		}).done(function(){
-//			NAVBAR.instacne({
-//				//id : 
-//			})
+			self.add("#inner_topbar",TOPBAR.instance({
+				id : "topbar" 
+			}));	
 		})
-		this.$$.on("jqrouter.key.x", function(e,data){
-			console.warn("eeee",e,data)
-		});
-		
-		
 	};
 	
 });
