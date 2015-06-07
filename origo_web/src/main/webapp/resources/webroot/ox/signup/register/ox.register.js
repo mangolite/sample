@@ -6,7 +6,7 @@ utils.define("ox.register").extend('spamjs.module').as(function(registration,_in
 		var self = this;
 		console.log("init register module")
 		this.view('ox.register.html').done(function(){
-			
+			$('.navbar-search').hide();
 		});
 		
 	};

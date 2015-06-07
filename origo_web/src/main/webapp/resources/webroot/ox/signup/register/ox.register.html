@@ -1,8 +1,9 @@
 <div class="row register_tabs">
-	<div class="list-group col-md-3">
+	<div class="list-group">
 		<div  class="list-group-item disabled"> Welcome Guest! </div>
 		
 		<jq-tab value="gen" class="reg_tabs">
+		<div class="inner_reg_tabs">
 			<jq-tab-head value="general" pointer>General</jq-tab-head>
 			<jq-tab-head value="document"  pointer>Document</jq-tab-head>
 			<jq-tab-head value="video"  pointer>Video</jq-tab-head>
@@ -10,8 +11,8 @@
 			<jq-tab-head value="products"  pointer >Products</jq-tab-head>
 			<jq-tab-head value="services"  pointer>Services</jq-tab-head>
 			<jq-tab-head value="contact"  pointer>Contact</jq-tab-head>
-			
-			<div class="fluid col-md-9">
+		</div>	
+			<div class="fluid">
 				<jq-tab-pane value="general">
 					<include src="register.general.html" data={} />
 				</jq-tab-pane>
