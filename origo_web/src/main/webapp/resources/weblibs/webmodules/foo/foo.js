@@ -6,12 +6,12 @@
 
 		if (root.utils && typeof root.utils.define === 'function') {
 			// Utils Package System
-			return utils.define(modeulName).as(cb);
+			return utils.define(modeulName).as(cb.bind(root));
 		} else {
 			var factory = function() {
-				var X = {};
-				cb(X);
-				return X;
+				var X = {},x;
+				var _X = cb.bind(root)(X,x);
+				return _X || X;
 			};
 			if (typeof root.define === 'function' && root.define.amd) {
 				// AMD based package system
@@ -29,6 +29,19 @@
 		}
 
 	};
+	
+	
+	foo.createNamespace = function(nameSpace,valObj){
+		var nspace = nameSpace.split('.');
+		var win = window;
+		var retspace = nspace[0];
+		for(var i =0; i<nspace.length-1; i++){
+			if (!win[nspace[i]]) win[nspace[i]] = {};
+			retspace = nspace[i];
+			win = win[retspace];
+		}
+		return win[nspace[nspace.length-1]] = valObj;
+	}
 
 	foo.debounce = function debounce(func, wait, immediate) {
 		var timeout, args, context, timestamp, result;

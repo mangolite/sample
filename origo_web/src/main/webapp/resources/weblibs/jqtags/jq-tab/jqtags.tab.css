@@ -1,0 +1,46 @@
+jq-tab jq-tab-heads {
+	width: 100%;
+	height: 49px;
+	position: relative;
+	padding-top: 30px;
+	padding: 18px 0 0 15px;
+	border-bottom: 1px solid #c7cccd;
+	display: block;
+	position: static;
+}
+jq-tab jq-tab-heads::after {
+	clear: both;
+	display: block;
+	content: "";
+}
+jq-tab jq-tab-heads jq-tab-head {
+	display: inline-block;
+	padding: 18px 30px;
+	border: 1px solid transparent;
+	border: 1px solid #bbb;
+	border-bottom: 0;
+	position: relative;
+	background: #e6e8e7;
+	font-family: Roboto;
+	color: #999;
+	box-sizing: border-box;
+	line-height: 1;
+	cursor: pointer;
+	padding: 9px 12px 6px;
+	margin-right: 2px;
+}
+jq-tab jq-tab-heads jq-tab-head[active] {
+	background: #f6f8f7;
+	border-color: #c7cccd;
+	border-top: 3px solid #15a4fa;
+	padding-top: 7px;
+	padding-bottom: 9px;
+	position: relative;
+	top: -2px;
+	z-index: 1;
+	font-family: RobotoBold;
+	color: #666;
+}
+jq-tab jq-tab-head, jq-tab jq-tab-next, jq-tab jq-tab-prev {
+	cursor: pointer;
+}

@@ -31,10 +31,12 @@ repositories {
 }
 
 //Compass plugin config
+/*
 compass {
     cssDir = file('src/main/webapp/dist')
     sassDir = file('src/main/webapp/resources')
 }
+*/
 
 dependencies {
 	def springVersion = "3.1.0.RELEASE"

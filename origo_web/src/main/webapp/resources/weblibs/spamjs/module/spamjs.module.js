@@ -122,6 +122,10 @@ utils.define('spamjs.module').as(function(viewmodel,_instance_){
 		if(typeof obj.src === 'string'){
 			obj.tempPath = self.getClass().getPath(obj.src)
 			dff.push(viewmodel.prepare_template(obj.tempPath));
+		} else if(typeof obj.src === 'object' && typeof obj.src.done == "function"){
+			dff.push(obj.src.done(function(resp){
+				obj.html = resp;
+			}));
 		}
 		if(typeof obj.data === 'string'){
 			dff.push($.getJSON(self.getClass().getPath(obj.data)).done(function(resp){

@@ -77,28 +77,6 @@
         ]
     },
     {
-        "name": "webmodules/foo",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/webmodules/foo.git",
-            "reference": "2ea63cfe97c4e975d16c4e1a6af10f4e780f1977"
-        },
-        "time": "2015-05-08 06:44:22",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "JQuery Utilitties compatible with rudrax framework",
-        "keywords": [
-            "api",
-            "rudra"
-        ]
-    },
-    {
         "name": "webmodules/jquery",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -115,58 +93,6 @@
             "MIT"
         ],
         "description": "JQuery Fork Compatible with SPAMJS framework",
-        "keywords": [
-            "api",
-            "rudra"
-        ]
-    },
-    {
-        "name": "jqgeeks/utils",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/jqgeeks/utils.git",
-            "reference": "56c343cc6ba80fb20508fc67d79a6c87c92e3d61"
-        },
-        "require": {
-            "webmodules/foo": ">=0.0.4",
-            "webmodules/jquery": ">=1.3.0"
-        },
-        "time": "2015-05-19 18:06:13",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "JQuery Utilitties compatible with rudrax framework",
-        "keywords": [
-            "api",
-            "rudra"
-        ]
-    },
-    {
-        "name": "spamjs/module",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/spamjs/module.git",
-            "reference": "316eb8e04b71a710b6890ae654c8ef4a4e1ab129"
-        },
-        "require": {
-            "jqgeeks/utils": ">=1.2.6",
-            "webmodules/rivets": ">=0.7.1"
-        },
-        "time": "2015-05-14 05:58:35",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "An MVVM framework for single-page-application",
         "keywords": [
             "api",
             "rudra"
@@ -224,33 +150,6 @@
         ]
     },
     {
-        "name": "jqutils/cache",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/jqutils/cache.git",
-            "reference": "24cab89571bbb00574c61d36c7085c95e8ca5397"
-        },
-        "require": {
-            "jqgeeks/utils": "dev-master"
-        },
-        "time": "2015-05-19 14:56:36",
-        "type": "utility",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "A cache utility to manage localStorage at instance level and caching js files on browser",
-        "homepage": "https://gitlab.com/jqutils/cache",
-        "keywords": [
-            "jqgeeks",
-            "jqutils",
-            "spamjs"
-        ]
-    },
-    {
         "name": "webmodules/handlebars.js",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -304,32 +203,6 @@
         "keywords": [
             "api",
             "rudra"
-        ]
-    },
-    {
-        "name": "jqutils/jsonutil",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/jqutils/jsonutil.git",
-            "reference": "9d9837dd367b9fbd9c6942512e25f49257afd895"
-        },
-        "require": {
-            "webmodules/dummy-json": "dev-master"
-        },
-        "time": "2015-05-10 18:44:10",
-        "type": "utility",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "utils.json interceptor to create json from json template",
-        "homepage": "https://gitlab.com/jqgeeks/jsonutil",
-        "keywords": [
-            "jqgeeks",
-            "jqutils"
         ]
     },
     {
@@ -464,32 +337,6 @@
         ]
     },
     {
-        "name": "jqtags/jq-tab",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/jqtags/jq-tab.git",
-            "reference": "a2d615f1ddd66b25f33fd9eafb94114ac4cd5406"
-        },
-        "require": {
-            "jqgeeks/jqtag": ">=0.0.0"
-        },
-        "time": "2015-05-19 17:52:07",
-        "type": "tag",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "fancy bootstrap tab",
-        "keywords": [
-            "pitana",
-            "polymer",
-            "x-tag"
-        ]
-    },
-    {
         "name": "webmodules/bootstrap",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -569,35 +416,6 @@
         ]
     },
     {
-        "name": "webmodules/bootstrap-social",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://gitlab.com/webmodules/bootstrap-social.git",
-            "reference": "3b0d09c95311702f1672276aee0f95729c7fbca8"
-        },
-        "require": {
-            "fortawesome/font-awesome": "4.1.0",
-            "webmodules/bootstrap": "dev-master"
-        },
-        "suggest": {
-            "webmodules/bootstrap": "dev-master0 - Allows more advanced features"
-        },
-        "time": "2014-12-04 09:48:37",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "JQuery Utilitties compatible with rudrax framework",
-        "keywords": [
-            "api",
-            "rudra"
-        ]
-    },
-    {
         "name": "jqgeeks/jqtag",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -622,6 +440,188 @@
         "keywords": [
             "polymers",
             "x-tags"
+        ]
+    },
+    {
+        "name": "webmodules/foo",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/foo.git",
+            "reference": "90a2c768c26e0034b544fa0ed0c23918d1d4b36b"
+        },
+        "time": "2015-05-18 17:38:52",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Utilitties compatible with rudrax framework",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "jqgeeks/utils",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqgeeks/utils.git",
+            "reference": "3a358f32a1cd7e9c295c2ca009ae71d76a6a6c53"
+        },
+        "require": {
+            "webmodules/foo": ">=0.0.4",
+            "webmodules/jquery": ">=1.3.0"
+        },
+        "time": "2015-06-07 12:34:48",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Utilitties compatible with rudrax framework",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "spamjs/module",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/spamjs/module.git",
+            "reference": "a724d5707dfdd806213dc8afd78e29eb63428b15"
+        },
+        "require": {
+            "jqgeeks/utils": ">=1.2.6",
+            "webmodules/rivets": ">=0.7.1"
+        },
+        "time": "2015-06-07 12:38:01",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "An MVVM framework for single-page-application",
+        "keywords": [
+            "api",
+            "rudra"
+        ]
+    },
+    {
+        "name": "jqutils/cache",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqutils/cache.git",
+            "reference": "2860fc656fdcf6567bc3c991f4840db29de71674"
+        },
+        "require": {
+            "jqgeeks/utils": "dev-master"
+        },
+        "time": "2015-06-07 12:37:00",
+        "type": "utility",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A cache utility to manage localStorage at instance level and caching js files on browser",
+        "homepage": "https://gitlab.com/jqutils/cache",
+        "keywords": [
+            "jqgeeks",
+            "jqutils",
+            "spamjs"
+        ]
+    },
+    {
+        "name": "jqutils/jsonutil",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqutils/jsonutil.git",
+            "reference": "b0c168f311bfa93894028e08ce2adf1212840af8"
+        },
+        "require": {
+            "webmodules/dummy-json": "dev-master"
+        },
+        "time": "2015-06-07 12:35:47",
+        "type": "utility",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "utils.json interceptor to create json from json template",
+        "homepage": "https://gitlab.com/jqgeeks/jsonutil",
+        "keywords": [
+            "jqgeeks",
+            "jqutils"
+        ]
+    },
+    {
+        "name": "jqtags/jq-tab",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/jqtags/jq-tab.git",
+            "reference": "023f9054af0ddaf09813f9c8afa23996a11a348f"
+        },
+        "require": {
+            "jqgeeks/jqtag": ">=0.0.0"
+        },
+        "time": "2015-06-07 12:33:36",
+        "type": "tag",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "fancy bootstrap tab",
+        "keywords": [
+            "pitana",
+            "polymer",
+            "x-tag"
+        ]
+    },
+    {
+        "name": "webmodules/bootstrap-social",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/webmodules/bootstrap-social.git",
+            "reference": "2b4e0662cd7c407c128693b289e359f66b44e94e"
+        },
+        "require": {
+            "fortawesome/font-awesome": "4.1.0",
+            "webmodules/bootstrap": ">=3.2.0"
+        },
+        "suggest": {
+            "webmodules/bootstrap": "dev-master0 - Allows more advanced features"
+        },
+        "time": "2015-05-06 18:29:33",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "JQuery Utilitties compatible with rudrax framework",
+        "keywords": [
+            "api",
+            "rudra"
         ]
     }
 ]
