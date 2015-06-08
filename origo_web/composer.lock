@@ -151,6 +151,35 @@
             "time": "2015-06-07 12:34:48"
         },
         {
+            "name": "jqmodules/jq2much",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jqmodules/jq2much.git",
+                "reference": "1514e19669f3d47c83ebed1eb38089033e33fced"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jqmodules/jq2much/zipball/1514e19669f3d47c83ebed1eb38089033e33fced",
+                "reference": "1514e19669f3d47c83ebed1eb38089033e33fced",
+                "shasum": ""
+            },
+            "require": {
+                "webmodules/foo": ">=0.0.0",
+                "webmodules/jquery": ">=1.8"
+            },
+            "type": "utility",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Extension api to jQuery",
+            "keywords": [
+                "javascript"
+            ],
+            "time": "2015-06-02 20:11:28"
+        },
+        {
             "name": "jqtags/jq-switch",
             "version": "dev-master",
             "source": {
@@ -180,10 +209,11 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqtags/jq-tab.git",
-                "reference": "023f9054af0ddaf09813f9c8afa23996a11a348f"
+                "reference": "f2ada74da4503d4019b74970f38c590ce1369590"
             },
             "require": {
-                "jqgeeks/jqtag": ">=0.0.0"
+                "jqgeeks/jqtag": ">=0.0.0",
+                "jqmodules/jq2much": ">=0.0.0"
             },
             "type": "tag",
             "notification-url": "https://packagist.org/downloads/",
@@ -196,7 +226,7 @@
                 "polymer",
                 "x-tag"
             ],
-            "time": "2015-06-07 12:33:36"
+            "time": "2015-06-07 19:50:23"
         },
         {
             "name": "jqutils/cache",
