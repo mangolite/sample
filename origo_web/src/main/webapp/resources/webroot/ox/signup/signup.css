@@ -1,7 +1,15 @@
 jq-tab-head{
-	display : block;
-	height : 40px;
-	
+	color: #2196f3;
+	  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
 }
 
 .inner_reg_tabs {
@@ -152,9 +160,6 @@ form
 }
 header
 {
-	float: left;
-	padding: 20px 0px;
-	
 	-ms-box-shadow: inset 0px -6px 13px -7px rgba(192, 192, 192, 0.83);
 	-o-box-shadow: inset 0px -6px 13px -7px rgba(192, 192, 192, 0.83);
 	-webkit-box-shadow: inset 0px -6px 13px -7px rgba(192, 192, 192, 0.83);
@@ -1776,12 +1781,35 @@ label:before {
 	}
 }
 
+.left-bar{
+  height: 100%;
+  width: 266px;
+  background-color: #ffffff;
+  display: block;
+  float: left;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+}
 
 
+.left-bar .admin-logo {
+  background-color: #2196f3;
+  min-height: 70px;
+  padding-left: 15px;
+  width: 266px;
+  z-index: 999
+}
 
-.ox-register {
-	width : 80%;
-	left: 10%;
-	right: 10%;
-	position : relative;
+
+.left-bar .admin-logo .logo-holder{
+  color: white;
+  padding-top: 8px;
+  font-size: 20px;
+}
+
+.left-bar .menu-parent, .side-bar .menu-parent{
+	  padding-top: 70px;
+}
+.left-bar .menu-parent > jq-tab-head {
+  display: block;
+  border-bottom: 1px solid #e9ecf2;
 }
