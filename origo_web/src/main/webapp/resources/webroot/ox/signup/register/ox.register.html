@@ -1,96 +1,40 @@
 <div class="row register_tabs">
 
-		<div class="left-bar " tabindex="0" style="overflow: hidden; outline: none;">
-        <div class="admin-logo">
-            <div class="logo-holder pull-left" style="color:white; padding-top: 8px; font-size: 20px">
-               Registration Screen
-            </div>
-        </div>
-        <jq-tab value="gen" id="registerTab" class="list-unstyled menu-parent">
-               
-            <jq-tab-head value="general" pointer>General</jq-tab-head>
-           
-            
-                <jq-tab-head value="document"  pointer>Document</jq-tab-head>
-           
-            
-             			<jq-tab-head value="video"  pointer>Video</jq-tab-head>
-             
-           
-            
-			<jq-tab-head value="vision"  pointer >Vision</jq-tab-head>
-             
-          
-             
-			<jq-tab-head value="products"  pointer >Products</jq-tab-head>
-             
-         
-          
-			<jq-tab-head value="services"  pointer>Services</jq-tab-head>
-             
-           
-           
-			<jq-tab-head value="contact"  pointer>Contact</jq-tab-head>
-             
-    
-         
-    </div>	
-			<div class="fluid">
-				<jq-tab-pane tab="general">
-					<include src="register.general.html" data={} />
-				</jq-tab-pane>
-				<jq-tab-pane tab="document">
-					<include src="register.document.html" data={} />
-				</jq-tab-pane>
-				<jq-tab-pane tab="video">
-					<include src="register.video.html" data={} />
-				</jq-tab-pane>
-				<jq-tab-pane tab="vision">
-					<include src="register.vision.html" data={} />
-				</jq-tab-pane>
-				<jq-tab-pane tab="products">
-					<include src="register.products.html" data={} />
-				</jq-tab-pane>
-				<jq-tab-pane tab="services">
-					<include src="register.services.html" data={} />
-				</jq-tab-pane>
-				<jq-tab-pane tab="contact">
-					<include src="register.contact.html" data={} />
-				</jq-tab-pane>
-			</div>
-	
-		</jq-tab>
-	
+		<jq-tab value="gen" id="registerTab" class="list-unstyled menu-parent">
+	<div class="left-bar " tabindex="0"
+		style="overflow: hidden; outline: none;">
+		<div class="admin-logo">
+			<div class="logo-holder pull-left"
+				style="color: white; padding-top: 8px; font-size: 20px">
+				Registration Screen</div>
+		</div>
+
+
+		<jq-tab-head value="general" pointer>General</jq-tab-head> <jq-tab-head
+			value="document" pointer>Document</jq-tab-head> <jq-tab-head
+			value="video" pointer>Video</jq-tab-head> <jq-tab-head value="vision"
+			pointer>Vision</jq-tab-head> <jq-tab-head value="products" pointer>Products</jq-tab-head>
+
+		<jq-tab-head value="services" pointer>Services</jq-tab-head> <jq-tab-head
+			value="contact" pointer>Contact</jq-tab-head>
+	</div>
+	<div class="fluid">
+		<jq-tab-pane tab="general"> <include
+			src="register.general.html" data={} /> </jq-tab-pane>
+		<jq-tab-pane tab="document"> <include
+			src="register.document.html" data={} /> </jq-tab-pane>
+		<jq-tab-pane tab="video"> <include
+			src="register.video.html" data={} /> </jq-tab-pane>
+		<jq-tab-pane tab="vision"> <include
+			src="register.vision.html" data={} /> </jq-tab-pane>
+		<jq-tab-pane tab="products"> <include
+			src="register.products.html" data={} /> </jq-tab-pane>
+		<jq-tab-pane tab="services"> <include
+			src="register.services.html" data={} /> </jq-tab-pane>
+		<jq-tab-pane tab="contact"> <include
+			src="register.contact.html" data={} /> </jq-tab-pane>
 	</div>
 
+	</jq-tab>
 
-
-
-
-
-
-
-
-
-
-
-<div class="row register_tabs" hidden>
-	<div class="list-group col-md-3">
-		<div  class="list-group-item disabled"> Welcome Guest! </div>
-		
-		
-		 <a jqrouter
-			class="list-group-item" href="#/tab/general">General</a> <a jqrouter
-			class="list-group-item" href="#/tab/document">Document</a> <a
-			jqrouter class="list-group-item" href="#/tab/video">Video</a> <a
-			jqrouter class="list-group-item" href="#/tab/vision">Vision</a> <a
-			jqrouter class="list-group-item" href="#/tab/products">Products</a> <a
-			jqrouter class="list-group-item" href="#/tab/services">Services</a> <a
-			jqrouter class="list-group-item" href="#/tab/contact">Contact</a>
-	</div>
-	<div class="fluid col-md-9">
-		<div class="register_module"></div>
-	</div>
 </div>
-
-
