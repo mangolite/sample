@@ -418,7 +418,6 @@ window.utils = function(root){
 		_READY_.promise().done(cb)
 	};
 	utils.scan_scripts = function(){
-		console.info("scannnig script tags...");
 		var scripts = document.getElementsByTagName('script');
 		for(var i=0; i<scripts.length;i++){
 			if(!scripts[i].loaded){
@@ -448,7 +447,6 @@ window.utils = function(root){
 	utils.ready(utils.scan_scripts);
 	
 	$(document).ready(function(){
-		console.info("document..ready...");
 		_READY_.resolve();
 	});
 	utils.on_config_ready = function(){
@@ -513,7 +511,6 @@ utils.define('utils.config', function(config) {
 		return CONFIG[moduleName] || {};
 	};
 	config.getModuleConfig = function(moduleName){
-		console.info("moduleName",moduleName)
 		return CONFIG.moduleConfig[moduleName] || {};
 	};
 });
@@ -760,3 +757,23 @@ utils.define('utils.url', function(url) {
 		return (domain +  '/'  + parents.join( '/')).replace(/(\/)+/g,'/');
 	};
 });
+
+(function(foo){
+	foo._require_ = function(){
+		return utils.require.apply(utils,arguments);
+	};
+	var _module_ = foo._module_;
+	foo._module_ = function(){
+		return utils.module.apply(utils,arguments) || _module_.apply(foo,arguments);
+	};
+	foo._define_ = function(moduleName, fromModuleName,definition){
+		if(arguments.length ===3){
+			return utils.define(moduleName).extend(fromModuleName).as(definition);
+		} else if(arguments.length === 2){
+			return utils.define(moduleName).as(fromModuleName);
+		} else {
+			return utils.define(moduleName,fromModuleName);
+		}
+	};
+})(this)
+

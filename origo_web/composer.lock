@@ -4,8 +4,49 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a411625e1527b76924c0ea66f5c519cd",
+    "hash": "72322933a719e8be9198e2586ef96d02",
     "packages": [
+        {
+            "name": "ckeditor/ckeditor",
+            "version": "4.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ckeditor/ckeditor-releases.git",
+                "reference": "cc324415302784eb1abe33a3762fbdd3b48c558b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/cc324415302784eb1abe33a3762fbdd3b48c558b",
+                "reference": "cc324415302784eb1abe33a3762fbdd3b48c558b",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+",
+                "LGPL-2.1+",
+                "MPL-1.1+"
+            ],
+            "authors": [
+                {
+                    "name": "CKSource",
+                    "homepage": "http://cksource.com"
+                }
+            ],
+            "description": "JavaScript WYSIWYG web text editor.",
+            "homepage": "http://ckeditor.com",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "fckeditor",
+                "html",
+                "javascript",
+                "richtext",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2015-01-27 15:13:53"
+        },
         {
             "name": "fortawesome/font-awesome",
             "version": "4.1.0",
@@ -84,7 +125,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/jqtag.git",
-                "reference": "4e512c51f466c2743819d2b55ebefd482f65a8bc"
+                "reference": "bc19fae0a3387c9a182b9aeff714bbd5fc467511"
             },
             "require": {
                 "jqgeeks/utils": ">=1.1.3",
@@ -101,7 +142,7 @@
                 "polymers",
                 "x-tags"
             ],
-            "time": "2015-05-22 06:39:10"
+            "time": "2015-06-09 20:15:15"
         },
         {
             "name": "jqgeeks/tunnel",
@@ -132,10 +173,10 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqgeeks/utils.git",
-                "reference": "3a358f32a1cd7e9c295c2ca009ae71d76a6a6c53"
+                "reference": "facc591654742eec9c61c2f66d31631ef9ea02c9"
             },
             "require": {
-                "webmodules/foo": ">=0.0.4",
+                "webmodules/foo": ">=0.0.8",
                 "webmodules/jquery": ">=1.3.0"
             },
             "type": "library",
@@ -148,7 +189,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2015-06-07 12:34:48"
+            "time": "2015-06-09 20:23:25"
         },
         {
             "name": "jqmodules/jq2much",
@@ -185,7 +226,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqtags/jq-switch.git",
-                "reference": "699eb2f38cea64da5301e5c0fae732a8ae874bdf"
+                "reference": "cf3c9850d87eaf70e59655a788e3eeee10237c82"
             },
             "require": {
                 "jqgeeks/jqtag": ">=0.0.0"
@@ -201,7 +242,7 @@
                 "polymer",
                 "x-tag"
             ],
-            "time": "2015-05-12 16:59:15"
+            "time": "2015-06-09 19:06:26"
         },
         {
             "name": "jqtags/jq-tab",
@@ -209,7 +250,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqtags/jq-tab.git",
-                "reference": "f2ada74da4503d4019b74970f38c590ce1369590"
+                "reference": "1a5155b8f14335359e37648fdfb1bffb4e838e15"
             },
             "require": {
                 "jqgeeks/jqtag": ">=0.0.0",
@@ -226,7 +267,7 @@
                 "polymer",
                 "x-tag"
             ],
-            "time": "2015-06-07 19:50:23"
+            "time": "2015-06-09 19:19:33"
         },
         {
             "name": "jqutils/cache",
@@ -259,7 +300,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/jqutils/jsonutil.git",
-                "reference": "b0c168f311bfa93894028e08ce2adf1212840af8"
+                "reference": "dc01dd799fa2c49b52fd943900bffe62601e3c73"
             },
             "require": {
                 "webmodules/dummy-json": "dev-master"
@@ -275,7 +316,7 @@
                 "jqgeeks",
                 "jqutils"
             ],
-            "time": "2015-06-07 12:35:47"
+            "time": "2015-06-08 16:50:57"
         },
         {
             "name": "pitana/pitana.js",
@@ -360,7 +401,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/spamjs/module.git",
-                "reference": "a724d5707dfdd806213dc8afd78e29eb63428b15"
+                "reference": "d33af5cdd43a5be06fd56e5f3305460ad225af15"
             },
             "require": {
                 "jqgeeks/utils": ">=1.2.6",
@@ -376,7 +417,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2015-06-07 12:38:01"
+            "time": "2015-06-08 16:53:27"
         },
         {
             "name": "twbs/bootstrap-sass",
@@ -515,7 +556,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/webmodules/foo.git",
-                "reference": "90a2c768c26e0034b544fa0ed0c23918d1d4b36b"
+                "reference": "a9f8d29c08e91bae2bbf190df972d6a4a1b2b465"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -527,7 +568,7 @@
                 "api",
                 "rudra"
             ],
-            "time": "2015-05-18 17:39:13"
+            "time": "2015-06-08 20:14:50"
         },
         {
             "name": "webmodules/handlebars.js",

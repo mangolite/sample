@@ -1,6 +1,6 @@
-utils.define('jqtags.switch').extend('jqtag').as(function(test,_test_, _attr_){
+_tag_('jqtags.switch',function(test,_test_, _attr_){
 	
-	test.register({
+	return {
 	    tagName: "jq-switch",
 	    events: {
 	        "change .switch-input":"toggleValue"
@@ -8,19 +8,32 @@ utils.define('jqtags.switch').extend('jqtag').as(function(test,_test_, _attr_){
 	    accessors: {
 	        value: {
 	            type: "boolean"
+	        },
+	        on: {
+	            type: "string",
+	            default : "On"
+	        },
+	        off: {
+	            type: "string",
+	        	default : "Off"
+	        },
+	        label: {
+	            type: "string",
+	        	default : ""
 	        }
 	    },
 	    attachedCallback: function () {
 	        this.$.innerHTML = 
+	        '<label><span>'+this.$.label+'</span>' + 
 	        '<label class="switch"> \
 	        	<input type="checkbox" class="switch-input" '+ (this.$.value? 'checked' : '') +'> \
-	        	<span class="switch-label" data-on="On" data-off="Off"></span> \
+	        	<span class="switch-label" data-on="'+this.$.on+'" data-off="'+this.$.off+'"></span> \
 	        	<span class="switch-handle"></span> \
-	    	</label>';
+	    	</label></label>';
 	    },
 	    toggleValue : function(){
 	    	this.$.value = !this.$.value;
 	    }
-	});
+	};
 	
 });

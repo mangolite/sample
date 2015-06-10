@@ -1,11 +1,11 @@
-utils.define('jqtags.tab').extend('jqtag').as(function(test){
+_tag_('jqtags.tab',function(test){
 	
-	var $ = jQuery;
+	var $ = _module_("jQuery");
 	var $tabHeaders,$tabBodies,$selectedHeader,$selectedBody;
 	var $this, $jqTab;
-	utils.require("jq2much");
+	_require_("jq2much");
 	
-	test.register({
+	return {
 	    tagName: "jq-tab",
 	    events: {
 	        "click jq-tab-head":"selectTab",
@@ -74,6 +74,6 @@ utils.define('jqtags.tab').extend('jqtag').as(function(test){
 	    		}
 	    	}
 	    }
-	});
+	};
 	
 });

@@ -18,6 +18,7 @@
     	"jqgeeks/tunnel": "dev-master",
     	"jqgeeks/jqtag": "dev-master",
     	"jqtags/jq-switch": "dev-master",
-    	"jqtags/jq-tab": "dev-master"
+    	"jqtags/jq-tab": "dev-master",
+    	"ckeditor/ckeditor" : "4.4.7"
     }
 }

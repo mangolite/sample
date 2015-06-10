@@ -1,4 +1,7 @@
-utils.define("ox.register").extend('spamjs.module').as(function(registration,_instance_) {
+_define_("ox.register",'spamjs.module',function(registration,_instance_) {
+	
+	_require_(":ox/ckeditor");
+	var ckEditor = _module_("CKEDITOR");
 	
 	_instance_._init_ = function(){
 		this.router = utils.module("jqrouter").instance();

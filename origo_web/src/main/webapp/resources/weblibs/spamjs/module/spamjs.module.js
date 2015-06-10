@@ -14,6 +14,10 @@ utils.define('spamjs.module').as(function(viewmodel,_instance_){
 		} else return "";
 	};
 	
+	viewmodel._model_ = function(){
+		return {};
+	};
+	
 	viewmodel._instance_ = function(_options_){
 		var _options_ = _options_ || {};
 		this.id = _options_.id || (++_id_);
@@ -21,14 +25,14 @@ utils.define('spamjs.module').as(function(viewmodel,_instance_){
 		this._child_ = {};
 		this.options = _options_;
 		this._data_ = {};
-		this._model_ = {};
+		this.$$model = this.getClass()._model_({});
 	};
 	
 	_instance_.apply = function(){
-		if(this.$$ && this._model_ && this.$$.html().trim()!==""){
+		if(this.$$ && this.$$model && this.$$.html().trim()!==""){
 			if(this.$$view) this.$$view.unbind();
 			var self = this;
-			this.$$view = rivets.bind(this.$$[0], { model : this._model_ }, {
+			this.$$view = rivets.bind(this.$$[0], { model : this.$$model }, {
 				handler: function(target, event, binding) {
 					if(binding.keypath && self[binding.keypath]){
 						self[binding.keypath](event, target,binding);
@@ -40,10 +44,10 @@ utils.define('spamjs.module').as(function(viewmodel,_instance_){
 	};
 	_instance_.model = function(model){
 		if(model!==undefined){
-			this._model_ = model;
+			this.$$model = model;
 			this.apply();
 		}
-		return this._model_;
+		return this.$$model;
 	};
 	_instance_.html = function(raw_html){
 		this.$$.html(raw_html);
