@@ -1,1 +1,1 @@
-include ':origo_service',':origo_web'
+include ':service',':web'

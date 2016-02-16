@@ -35,4 +35,9 @@ public class UserBean extends AbstractUser {
 			this.isValid(true);
 		}
 	}
+	
+	@Override
+	public boolean isValid() {
+		return true;
+	}
 }

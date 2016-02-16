@@ -1,7 +1,7 @@
-utils.define("ox.user").as(function(user,_user_){
+_define_("ox.user",function(user,_user_){
 	
-	var SERVER = utils.module('tunnel.server');
-	var PIPE = utils.module('tunnel.pipe');
+	var SERVER = _module_('tunnel.server');
+	var PIPE = _module_('tunnel.pipe');
 	
 	
 	user.validate = function(){
